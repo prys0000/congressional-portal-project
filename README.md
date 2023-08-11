@@ -1,8 +1,10 @@
-# Congressional-Portal-Project
+<img src="https://github.com/prys0000/political-commercial-collection-archives/blob/main/images/polithumb_home.jpg" width=8% height=8%>
+
+# congressional-portal-project
 
 ![Downloads](https://img.shields.io/github/downloads/prys0000/congressional-portal-project/total) ![Contributors](https://img.shields.io/github/contributors/prys0000/congressional-portal-project?color=dark-green) ![Issues](https://img.shields.io/github/issues/prys0000/congressional-portal-project) ![License](https://img.shields.io/github/license/prys0000/congressional-portal-project) 
 
-## About The Project
+## about the project
 
 The American Congress Digital Archives Portal is a collaborative, non-partisan project that makes congressional archives available online, bringing the history of the People’s Branch to the people. 
 
@@ -11,11 +13,11 @@ Our task at the Carl Albert Center Archives is to:
   * Collect metadata
   * Provide this information to our partners
 
-## Project Overview
+## project overview
 
 The Center will concentrate on content related to four curated collections, encompassing over 75,677 individual items from the listed collections:
 
-### Content Overview
+### content overview
 
 |  Collection  |  Topical/Whole  |   Topics   |  Subtopics  |  Significance  |  Extent  |  Formats  |
 |  :---  |  :---  |  :---  |  :---  |  :---  |  :---  |  :---  |
@@ -24,19 +26,19 @@ The Center will concentrate on content related to four curated collections, enco
 |  United States House of Representatives Offices Campaign Ads  |  collection-whole  |  Leaders and parties, Elections, Congress and interest groups, Congress history - general  |  Leadership activities, Determinants of voting, Tactics, Electoral outcomes, Impact of technology  |  Through the collection of television and radio political advertisements, film, social media, and other sources, the archive seeks to expand the knowledge and understanding of political communications, and the growth and changes in this field across the most significant and prolific era in world history.  |  24,678 items  |  Motion JPEG 2000, MOV, AVI  |
 |  Carl Albert Photograph Collection  |  collection-whole  |  Leaders and parties  |  Party leadership files  |  Exclusive to the Carl Albert Center Archives is the vast personal collective of Albert’s photograph collection ranging the entirety of his career.    |  11,000 items  |  TIFF  |
 
-## Roadmap
+## roadmap
 
 See the [open issues](https://github.com/prys0000/congressional-portal-project/issues) for a list of proposed features (and known issues).
 
-## License
+## license
 
 See [LICENSE](https://github.com/prys0000/congressional-portal-project/blob/main/LICENSE.md) for more information.
 
-## Authors
+## authors
 
 * **JA Pryse** - *Senior Archivist, III* 
 
-## Acknowledgements
+## acknowledgements
 
 * [Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
 
