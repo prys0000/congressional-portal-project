@@ -1,23 +1,19 @@
-<img src="https://github.com/prys0000/political-commercial-collection-archives/blob/main/images/polithumb_home.jpg" width=8% height=8%>
+<img src="https://github.com/prys0000/congressional-portal-project/blob/main/congressthumb_home.jpg" width=8% height=8%>
 
 # congressional-portal-project
 
-![Downloads](https://img.shields.io/github/downloads/prys0000/congressional-portal-project/total) ![Contributors](https://img.shields.io/github/contributors/prys0000/congressional-portal-project?color=dark-green) ![Issues](https://img.shields.io/github/issues/prys0000/congressional-portal-project) ![License](https://img.shields.io/github/license/prys0000/congressional-portal-project) 
+The congressional-portal-project aims to curate, process, and disseminate congressional archival collections, freely bringing the history of the people’s branch right back to the hands of the people. This repository offers a suite of tools designed for enhanced data management, intuitive user experiences, and seamless access to these invaluable historical records. 
 
-## about the project
+## project downloads available:
+  * **workflows** to help streamline processes for efficiency
+  * **python scripts** for faster, more accurate archival data processing for large-scale projects
+  * **practical applications** built for immediate and simple implementation
+  * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development
 
-The American Congress Digital Archives Portal is a collaborative, non-partisan project that makes congressional archives available online, bringing the history of the People’s Branch to the people. 
+## content overview
 
-Our task at the Carl Albert Center Archives is to:
-  * Scan curated collection materials 
-  * Collect metadata
-  * Provide this information to our partners
+The Center will concentrate on content related to **four curated collections, encompassing over 75,677 individual items** from the listed collections:
 
-## project overview
-
-The Center will concentrate on content related to four curated collections, encompassing over 75,677 individual items from the listed collections:
-
-### content overview
 
 |  Collection  |  Topical/Whole  |   Topics   |  Subtopics  |  Significance  |  Extent  |  Formats  |
 |  :---  |  :---  |  :---  |  :---  |  :---  |  :---  |  :---  |
