@@ -12,7 +12,7 @@ The congressional-portal-project aims to curate, process, and disseminate congre
 
 ## content overview
 
-The Center will concentrate on curated content related to **four curated collections, encompassing over 75,677 individual items** from the [**CAC Archives**](https://arc.ou.edu/). Additional digital files are available on our [**Digital Archives Platform**](https://oucac.access.preservica.com/)
+The Center will concentrate on curated content related to **four curated collections, encompassing over 75,677 individual items** from the [**CAC Archives**](https://arc.ou.edu/). Additional digital files are available on our [**Digital Archives Platform**](https://oucac.access.preservica.com/). 
 
 
 |  Collection  |  Topical/Whole  |   Topics   |  Subtopics  |  Significance  |  Extent  |  Formats  |
