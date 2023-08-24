@@ -22,19 +22,22 @@ The Center will concentrate on content related to **four curated collections, en
 |  United States House of Representatives Offices Campaign Ads  |  collection-whole  |  Leaders and parties, Elections, Congress and interest groups, Congress history - general  |  Leadership activities, Determinants of voting, Tactics, Electoral outcomes, Impact of technology  |  Through the collection of television and radio political advertisements, film, social media, and other sources, the archive seeks to expand the knowledge and understanding of political communications, and the growth and changes in this field across the most significant and prolific era in world history.  |  24,678 items  |  Motion JPEG 2000, MOV, AVI  |
 |  Carl Albert Photograph Collection  |  collection-whole  |  Leaders and parties  |  Party leadership files  |  Exclusive to the Carl Albert Center Archives is the vast personal collective of Albert’s photograph collection ranging the entirety of his career.    |  11,000 items  |  TIFF  |
 
-## roadmap
 
-See the [open issues](https://github.com/prys0000/congressional-portal-project/issues) for a list of proposed features (and known issues).
+
+## acknowledgements
+
+[Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
+
+See [acknowledgements](https://github.com/prys0000/political-commercial-collection-archives/blob/main/acknowledgements.md) for student staff and collaborators
+
+## authors
+
+[**JA Pryse**](japryse@ou.edu) - *Senior Archivist, III*
 
 ## license
 
 See [LICENSE](https://github.com/prys0000/congressional-portal-project/blob/main/LICENSE.md) for more information.
 
-## authors
+<br/>
 
-* **JA Pryse** - *Senior Archivist, III* 
-
-## acknowledgements
-
-* [Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
 
