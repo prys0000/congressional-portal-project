@@ -32,15 +32,15 @@ Our approach to project deliverables involved a comprehensive analysis of our re
 * It comprises materials from 23 unique collections, amassing well over 40,000 digital items.
 
 **2. Robert L. Owen Collection**
-* Robert L. Owen, a proud member of the Cherokee Nation, had a rich history as a federal Indian agent representing the Five Civilized Tribes prior to his venture into politics as a Progressive Democrat.
+* [Robert L. Owen](https://arc.ou.edu/repositories/3/resources/32), a proud member of the Cherokee Nation, had a rich history as a federal Indian agent representing the Five Civilized Tribes prior to his venture into politics as a Progressive Democrat.
 * This collection boasts 199 digital items that chronicle his significant contributions.
 
 **3. Julian P. Kanter Collection (House of Representatives Campaign Ads**
-* Focusing on the House of Representative Commercials offers a window into campaigns spanning from 1938 to 2016.
+* Focusing on the [House of Representative Commercials](https://arc.ou.edu/repositories/6) offers a window into campaigns spanning from 1938 to 2016.
 * This collection contains 24,678 videos that document the evolution of political campaigns over the decades.
 
 **4. Speaker Carl Albert's Photograph Collection**
-* An expansive collection celebrating Speaker Carl Albert's work in Congress
+* An [expansive collection celebrating Speaker Carl Albert's work](https://arc.ou.edu/repositories/3/archival_objects/422780) in Congress
 * The collection contains diverse maps, scrapbooks, oversize materials, and an impressive array of over 11,000 photographs.
 
 <br/>
