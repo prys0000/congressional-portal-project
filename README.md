@@ -4,10 +4,10 @@
 
 The congressional-portal-project aims to curate, process, and disseminate congressional archival collections, freely bringing the history of the people’s branch right back to the hands of the people. This repository offers a suite of tools designed for enhanced data management, intuitive user experiences, and seamless access to these invaluable historical records. 
 
-## project deliverables-downloads available:
+## downloads available:
   * **workflows** to help streamline processes for efficiency [**workflow folder found here**](https://github.com/prys0000/congressional-portal-project/tree/80d927a465ad89114c22223769f44829c760d016/workflows)
-  * **python scripts** for faster, more accurate archival data processing for large-scale projects [**setting up your system to work with python instructions found here**](https://github.com/prys0000/congressional-portal-project/blob/main/setting-up.md)
-  * **practical applications** built for immediate and simple implementation
+  * **python scripts and notes** for faster, more accurate archival data processing for large-scale projects [**python scripts and setting up python instructions found here**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes)
+  * **practical applications** built for immediate and simple implementation 
   * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development [**test documentaion folder**]
 
 
