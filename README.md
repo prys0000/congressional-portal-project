@@ -6,7 +6,7 @@ The congressional-portal-project aims to curate, process, and disseminate congre
 
 ## downloads available:
   * **workflows** to help streamline processes for efficiency [**workflow folder found here**](https://github.com/prys0000/congressional-portal-project/tree/80d927a465ad89114c22223769f44829c760d016/workflows)
-  * **python scripts and notes** for faster, more accurate archival data processing for large-scale projects [**python scripts and setting up python instructions found here**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes)
+  * **python scripts and notes** for faster, more accurate archival data processing for large-scale projects [**python scripts PLUS setting up python instructions found here**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes)
   * **practical applications** built for immediate and simple implementation 
   * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development [**test documentaion folder**]
 
