@@ -1,4 +1,4 @@
-<img src="https://github.com/prys0000/congressional-portal-project/blob/main/congressthumb_home.jpg" width=8% height=8%>
+<img src="https://github.com/prys0000/congressional-portal-project/blob/main/congressthumb_home.jpg" width=10% height=10%>
 
 # congressional-portal-project
 
