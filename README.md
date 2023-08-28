@@ -10,6 +10,7 @@ The congressional-portal-project aims to curate, process, and disseminate congre
   * **practical applications** built for immediate and simple implementation
   * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development [**test documentaion folder**]
 
+
 ## content overview
 
 The Center will concentrate on content related to **four curated collections, encompassing over 75,677 individual items** from the [**CAC Archives**](https://arc.ou.edu/). Additional digital files are available on our [**Digital Archives Platform**](https://oucac.access.preservica.com/). 
@@ -29,6 +30,8 @@ The Center will concentrate on content related to **four curated collections, en
 [Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
 
 See [acknowledgements](https://github.com/prys0000/political-commercial-collection-archives/blob/main/acknowledgements.md) for student staff and collaborators
+
+See [collaborative patners](https://github.com/prys0000/congressional-portal-project/blob/37667b3acaad33eb32e0bd00d4780b0ac0c6993c/collaborative-partners.md) for project partners. 
 
 ## authors
 
