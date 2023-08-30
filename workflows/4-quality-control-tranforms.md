@@ -39,3 +39,8 @@ The following workflow guides students through the process quality checking save
 </br>
 
 ![**Portal Metadata Model**](https://github.com/prys0000/congressional-portal-project/blob/main/portal_metadata.png){width-50%}
+
+
+#
+
+# [NEXT -> digital-object-uploads-preservica-archivespace](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/5-digital-object-uploads.md)
