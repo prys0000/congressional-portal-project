@@ -52,3 +52,6 @@ Our approach to project deliverables involved a comprehensive analysis of our re
 |  United States House of Representatives Offices Campaign Ads  |  collection-whole  |  Leaders and parties, Elections, Congress and interest groups, Congress history - general  |  Leadership activities, Determinants of voting, Tactics, Electoral outcomes, Impact of technology  |  Through the collection of television and radio political advertisements, film, social media, and other sources, the archive seeks to expand the knowledge and understanding of political communications, and the growth and changes in this field across the most significant and prolific era in world history.  |  24,678 items  |  Motion JPEG 2000, MOV, AVI  |
 |  Carl Albert Photograph Collection  |  collection-whole  |  Leaders and parties  |  Party leadership files  |  Exclusive to the Carl Albert Center Archives is the vast personal collective of Albert’s photograph collection ranging the entirety of his career.    |  11,000 items  |  TIFF  |
 
+#
+
+# [NEXT --> initial-phases-controlled-vocabulary](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/2-initial-phases-controlled-vocab.md) 
