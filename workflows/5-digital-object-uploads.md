@@ -45,6 +45,8 @@ The following workflow guides students through the process of preparing archival
 **Once this process is complete, check both platforms for errors**
 
 
+#
 
+# [NEXT -> archivesspace-migration-sync](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/6-AS-migration.md)
 
 
