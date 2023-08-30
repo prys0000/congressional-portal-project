@@ -75,3 +75,7 @@ The following standards are informed by the Federal Agencies Digitization Guidel
 
 ***Note: Always handle archival materials with care and respect the guidelines and instructions provided by the archival institution and project supervisor.***
 
+#
+
+# [NEXT --> quality-control-transforms](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/4-quality-control-tranforms.md)
+
