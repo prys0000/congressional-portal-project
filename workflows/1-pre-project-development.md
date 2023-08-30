@@ -54,4 +54,4 @@ Our approach to project deliverables involved a comprehensive analysis of our re
 
 #
 
-# [NEXT --> initial-phases-controlled-vocabulary](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/2-initial-phases-controlled-vocab.md) 
+# [NEXT -> initial-phases-controlled-vocabulary](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/2-initial-phases-controlled-vocab.md) 
