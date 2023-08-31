@@ -8,10 +8,12 @@ The congressional-portal-project aims to curate, process, and disseminate congre
   * **workflows** to help streamline processes for efficiency [**workflow folder found here**](https://github.com/prys0000/congressional-portal-project/tree/80d927a465ad89114c22223769f44829c760d016/workflows)
   * **python scripts and notes** for faster, more accurate archival data processing for large-scale projects [**ALL python scripts PLUS setting up python instructions found here**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes)
   * **practical applications** built for immediate and simple implementation [**worksheets, controlled lists, models**](https://github.com/prys0000/congressional-portal-project/tree/ae5d2ec01206cca5444bb599de49e53a1bb62e79/documentation-applications-lists)
-  * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development [*test documentaion folder*-not added-yet]
-      * handwritten documents - OCR
-      * transcribing A/V
-      * migration and finding aid tranforms
+  * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development
+    
+      * [handwritten documents - OCR](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/handwriting-OCR.py)
+      * [transcribing A/V](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/audio-video-transcriptions.py)
+      * [migration and finding aid tranforms](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/metadata-transform-portal-headings.py)
+      * [quality control and error checking](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/quality-spelling-grammar-check.py)
 
 
 ## content overview
