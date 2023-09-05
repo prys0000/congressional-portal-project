@@ -11,9 +11,9 @@ The congressional-portal-project aims to curate, process, and disseminate congre
   * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development
     
       * [handwritten documents - OCR](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/handwriting-OCR.py)
-      * [transcribing A/V - topic modeling - topic modeling](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/topic-model-av.py)
       * [combination (handwritten/typewritten), multi-pages document transcription with extraction of dates, named-entity recognition](https://github.com/prys0000/congressional-portal-project/blob/main/testing-documentation/combo-date-names.py)
       * [transcribing A/V](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/audio-video-transcriptions.py)
+      * [transcribing A/V - topic modeling - topic modeling](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/topic-model-av.py)
       * [migration and finding aid tranforms](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/metadata-transform-portal-headings.py)
       * [quality control and error checking](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/quality-spelling-grammar-check.py)
 
