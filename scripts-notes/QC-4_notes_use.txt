@@ -1,6 +1,6 @@
 Importing Libraries: The script starts by importing the necessary library, which is pandas.
 
-Reading Excel Files: It then reads two Excel files, corrected_file.xlsx and ACDAP_test_Owen.xlsx, into two pandas DataFrames, df_source and df_target, respectively.
+Reading Excel Files: It then reads two Excel files, corrected_file.xlsx and YOUR_EXCEL_FILE.xlsx, into two pandas DataFrames, df_source and df_target, respectively.
 
 Column Mappings: A list of tuples, column_mappings, is defined. Each tuple consists of a target column name and a corresponding source column name.
 
@@ -10,6 +10,6 @@ Date Conversion: The Date_1_ Begin column in df_source is converted to datetime 
 
 Assigning Static Strings: The script then assigns static strings to several columns in df_target. For example, the Contributing institution column is assigned the value "Carl Albert Congressional Research and Studies Center Archives".
 
-Saving the DataFrame: Finally, the modified df_target DataFrame is saved to a new Excel file, NEWowentest_updated_target.xlsx.
+Saving the DataFrame: Finally, the modified df_target DataFrame is saved to a new Excel file, NEW_UPDATED_target.xlsx.
 
 Note that the script assumes that the source and target Excel files are located in specific directories, and that the target Excel file has the same column structure as expected by the script.
