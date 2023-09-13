@@ -1,0 +1,33 @@
+OCR Script Summary
+
+Libraries Used:
+os: Manage file paths and directory operations.
+Pillow (PIL): Handle and process images.
+pytesseract: A Python binding for Tesseract-OCR Engine to extract text from images.
+pdf2image: Convert PDF files into images.
+sys: System-specific parameters and functions.
+
+Basic Configuration:
+Locate the directory of the currently running script or executable.
+Set paths for external tools required, such as poppler (needed to convert PDF to images) and Tesseract-OCR (for performing OCR).
+
+Image Preprocessing:
+The script resizes the image to improve resolution.
+Converts images to grayscale to simplify data.
+Enhances contrast to make text more distinguishable.
+Binarizes the image to create clear distinctions between text and background.
+Reduces noise for a cleaner image to optimize OCR.
+
+PDF Conversion to Images:
+The script converts each page of a given PDF into individual images using the pdf2image library.
+
+Performing OCR:
+The preprocessed images are passed through Tesseract's OCR engine to extract textual data.
+
+Main Execution:
+The user is prompted to provide paths to the folder containing PDFs and the output folder for the extracted text.
+For every PDF in the given directory, the script processes it through the described steps and writes the OCR results to a .txt file in the output directory.
+
+If the specified PDF folder doesn't exist, an error message is displayed and the script exits.
+Upon successful processing, the script confirms completion with a "Done OCR for all PDFs!" message.
+In essence, the script automates the process of converting PDFs to text using OCR by handling the tasks of image preprocessing, PDF conversion to images, and text extraction.
