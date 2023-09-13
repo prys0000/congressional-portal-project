@@ -2,7 +2,7 @@ Importing Libraries: The script starts by importing the necessary library, which
 
 Reading Excel Files: The script then reads two Excel files, corrected_file.xlsx and ACDAP_test_Owen.xlsx, into pandas DataFrames, df_source and df_target, respectively.
 
-Column Mappings: A list of tuples, column_mappings, is defined, where each tuple contains a target column name and a source column name. For example, the tuple ('Title', 'Title') means that the Title column in df_target should be updated with the values from the Title column in df_source.
+Column Mappings: A list of tuples (a collection of objects separated by commas), column_mappings, is defined, where each tuple contains a target column name and a source column name. For example, the tuple ('Title', 'Title') means that the Title column in df_target should be updated with the values from the Title column in df_source.
 
 Updating Target DataFrame: For each tuple in column_mappings, the script checks if the source column exists in df_source. If it does, the script updates the corresponding target column in df_target with the values from the source column in df_source.
 
