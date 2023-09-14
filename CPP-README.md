@@ -2,20 +2,21 @@
 
 # congressional-portal-project
 
-The congressional-portal-project aims to curate, process, and disseminate congressional archival collections, freely bringing the history of the people’s branch right back to the hands of the people. This repository offers a suite of tools designed for enhanced data management, intuitive user experiences, and seamless access to these invaluable historical records. 
+The congressional-portal-project provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies, automated workflows, and to document strategies throughout the project timeline.  The project scope focuses on materials relating to the American Congress from the [Carl Albert Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection). Specific content information can be reviewed below.
 
-## downloads available:
-  * **workflows** to help streamline processes for efficiency [**workflow folder found here**](https://github.com/prys0000/congressional-portal-project/tree/80d927a465ad89114c22223769f44829c760d016/workflows)
-  * **python scripts and notes** for faster, more accurate archival data processing for large-scale projects [**ALL python scripts PLUS setting up python instructions found here**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes)
-  * **practical applications** built for immediate and simple implementation [**worksheets, controlled lists, models**](https://github.com/prys0000/congressional-portal-project/tree/ae5d2ec01206cca5444bb599de49e53a1bb62e79/documentation-applications-lists)
-  * **testing and experiment documentation** as an open-access roadmap detailing the successes and challenges throughout project development
-    
-      * [handwritten documents - OCR](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/handwriting-OCR.py)
-      * [combination (handwritten/typewritten), multi-pages document transcription with extraction of dates, named-entity recognition](https://github.com/prys0000/congressional-portal-project/blob/main/testing-documentation/combo-date-names.py)
-      * [transcribing A/V](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/audio-video-transcriptions.py)
-      * [transcribing A/V - topic modeling - topic modeling](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/topic-model-av.py)
-      * [migration and finding aid tranforms](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/metadata-transform-portal-headings.py)
-      * [quality control and error checking](https://github.com/prys0000/congressional-portal-project/blob/c57c00ecf47803465dc0d6a3e656b93bc728462f/testing-documentation/quality-spelling-grammar-check.py)
+## folders:
+  * [**documentation-applications-list**](https://github.com/prys0000/congressional-portal-project/tree/main/documentation-applications-lists) contains project worksheets, collection indexes, training models, and controlled vocabularies.
+  * [**workflows**](https://github.com/prys0000/congressional-portal-project/tree/main/workflows) contains packaged workflows with either executable portable applications or consolidated/compiled scripts for OCRing, assigning controlled metadata, extracting specific text from OCR text.  
+  * [**python scripts and notes**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes) contains each individual script with corresponding notes to explain the script, the packages needed to make the package work, and steps for implementation. 
+
+## tasks simplified
+
+* **handwritten documents** - the focus is on transcribing hard to read text, and collecting required metadata, quickly and efficiently
+* **conbination of handwritten and typewritten documents** - developing automated processes to read both handwritten and typewritten documents
+* **transcribing A/V** - bulk transcription and extraction of audio/visual text greatly enhances workflow 
+* **transcribing A/V - topic modeling** - bulk transcription of audio/visual materials combined with adcanced topic identification increases productivity, accuracy, and efficiency
+* **migration and finding aid tranforms** - bulk processing for finding aid transforms involve creating or updating descriptive metadata and finding aids for archival collections
+* **quality control and error checking** - reviews and verifys the accuracy, completeness, and consistency of digitized and transcribed materials resulting from the above tasks
 
 
 ## content overview
