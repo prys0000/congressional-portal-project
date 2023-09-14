@@ -1,0 +1,54 @@
+PDF Metadata Extraction Script
+This script is designed to extract metadata and text content from PDF and TXT files located in a specified directory. The extracted information is then organized into an Excel spreadsheet for further analysis. Below is an overview of the script's main functionalities and components:
+
+Prerequisites
+Before running the script, ensure you have the required libraries installed:
+
+os: Used for file and directory operations.
+pandas: Used for creating and manipulating data in tabular form.
+spacy: Provides natural language processing capabilities.
+time: Used to measure the script's execution time.
+re: Enables regular expression operations.
+fitz (PyMuPDF): Used for parsing PDF documents.
+pathlib.Path: Provides an object-oriented interface for file system paths.
+spellchecker.SpellChecker: Used for spell-checking text.
+spacy.matcher.Matcher: Helps find sequences of tokens based on patterns.
+
+Input and Output Directories
+The script begins by requesting the user to provide two directory paths:
+
+input_directory: The path to the directory containing PDF and TXT files.
+output_directory: The path to the directory where the output Excel file will be saved.
+
+Functions
+Extracting Dates: The extract_dates function identifies and extracts date patterns from text.
+
+Loading Predefined Labels: The script loads predefined labels (such as locations, entities, persons, super PACs, political parties, and subjects) from a CSV file. These labels will be used for entity recognition.
+
+Initializing Matcher Patterns: The script initializes a Matcher with patterns based on the loaded labels. Patterns are added for persons, entities, super PACs, political parties, and subjects.
+
+Extracting Locations: The extract_locations function uses spaCy to extract locations (entities labeled as "GPE" - geopolitical entities) from the text.
+
+Extracting Super PACs: The extract_superpacs function uses the Matcher to find mentions of super PACs in the text.
+
+Extracting Entities and Persons: The extract_entities_and_persons function uses the Matcher to find mentions of entities, persons, political parties, and subjects in the text.
+
+Custom Stoplist: A custom stoplist is defined, combining spaCy's default stop words with common terms that should be excluded from keyword extraction.
+
+Extracting Keywords: The extract_keywords function extracts keywords and two-word phrases from the text, excluding common stop words and specific patterns.
+
+Correcting Spelling: The correct_spelling function utilizes the spellchecker library to correct misspelled words in the text.
+
+Processing Files
+The script processes each file in the specified directory, whether it's a PDF or TXT file. For PDFs, it uses the PyMuPDF library to extract text. For TXT files, it reads the content directly. The extracted text is then spell-checked and processed to extract dates, locations, entities, persons, political parties, subjects, super PACs, and keywords.
+
+Creating an Output DataFrame
+All extracted metadata is organized into a Pandas DataFrame called metadata_df. This DataFrame includes columns for file names, dates, locations, entities, persons, political parties, keywords, super PACs, and subjects.
+
+Saving Results
+The script creates the output directory if it doesn't exist and saves the metadata DataFrame to an Excel file named metadata.xlsx in the output directory.
+
+Execution Time
+Finally, the script calculates and displays the total processing time.
+
+Ensure you have the required libraries installed and specify the input and output directories before running the script. It will help you efficiently extract metadata and gain insights from your PDF and TXT files.
