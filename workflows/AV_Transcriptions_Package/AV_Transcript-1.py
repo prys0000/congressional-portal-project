@@ -1,20 +1,38 @@
 import os
 import speech_recognition as sr
-from moviepy.editor import AudioFileClip
-from moviepy.editor import VideoFileClip
+from moviepy.editor import AudioFileClip, VideoFileClip
 import pandas as pd
+
+
+def get_user_input(prompt: str) -> str:
+    """
+    Ask the user for directory input.
+
+    Args:
+    - prompt (str): The message displayed to the user.
+
+    Returns:
+    - str: The path inputted by the user.
+    """
+    while True:
+        user_input = input(prompt)
+        if os.path.exists(user_input):
+            return user_input
+        else:
+            print("Invalid path. Please enter a valid path.")
+
 
 # Initialize the recognizer
 r = sr.Recognizer()
 
-# Folder path containing the audio/video files
-folder_path = r'ENTER YOUR PATH TO FILES HERE (example: r'Z:\Reagan')'
+# Folder path containing the video files
+folder_path = get_user_input("Enter the path to your video files: ")
 
 # Create an empty list to store the results
 results = []
 
 # Create a directory to store the TXT files
-output_dir = r'ENTER YOUR PATH TO WHERE YOU WANT TRANSCRIPTIONS HERE (example: r'E:\Reagan\transcriptions')'
+output_dir = get_user_input("Enter the path to where you want transcriptions: ")
 os.makedirs(output_dir, exist_ok=True)
 
 # Iterate through the files in the folder
