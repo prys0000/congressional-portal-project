@@ -37,7 +37,7 @@ The Center will concentrate on content related to **four curated collections, en
 
 [Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
 
-See [acknowledgements]() for student staff and collaborators
+See [acknowledgements](https://github.com/prys0000/congressional-portal-project/blob/938012fbbabfbeac3d86a89255bf5c9c49c84948/documentation-applications-lists/acknowledgements.md) for student staff and collaborators
 
 See [collaborative patners](https://github.com/prys0000/congressional-portal-project/blob/37667b3acaad33eb32e0bd00d4780b0ac0c6993c/collaborative-partners.md) for project partners. 
 
