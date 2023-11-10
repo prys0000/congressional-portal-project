@@ -43,4 +43,4 @@ The following workflow guides students through the process quality checking save
 
 #
 
-# [NEXT -> digital-object-uploads-preservica-archivespace](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/5-digital-object-uploads.md)
+# [NEXT -> digital-object-uploads-preservica-archivespace](https://github.com/prys0000/congressional-portal-project/blob/c6ad3b7ffc2ad28b5f13ffeb0f2009fe967e17c7/documentation-applications-lists/5-digital-object-uploads.md)
