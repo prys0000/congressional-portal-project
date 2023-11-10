@@ -47,6 +47,6 @@ The following workflow guides students through the process of preparing archival
 
 #
 
-# [NEXT -> archivesspace-migration-sync](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/6-AS-migration.md)
+# [NEXT -> archivesspace-migration-sync](https://github.com/prys0000/congressional-portal-project/blob/c6ad3b7ffc2ad28b5f13ffeb0f2009fe967e17c7/documentation-applications-lists/6-AS-migration.md)
 
 
