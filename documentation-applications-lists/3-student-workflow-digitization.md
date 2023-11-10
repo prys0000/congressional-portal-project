@@ -77,5 +77,5 @@ The following standards are informed by the Federal Agencies Digitization Guidel
 
 #
 
-# [NEXT -> quality-control-transforms](https://github.com/prys0000/congressional-portal-project/blob/main/workflows/4-quality-control-tranforms.md)
+# [NEXT -> quality-control-transforms](https://github.com/prys0000/congressional-portal-project/blob/c6ad3b7ffc2ad28b5f13ffeb0f2009fe967e17c7/documentation-applications-lists/4-quality-control-tranforms.md)
 
