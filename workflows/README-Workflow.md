@@ -19,16 +19,21 @@ This folder contains information and full workflow packages, topic and training 
 
 All scripts in this folder are ***templates*** and need to be adjusted for each project. Use these as a starting place to build a tailored project deployment. 
 
+**OCR_Package** contains:
+
+* This folder contains the entire downloadable package for a portable OCR application that can be used on multiple student workstations as a part of the day-to-day routine to read pdf or text files and extract text either (1) into a text file or (2) into an excel file with file names. 
+
+**Extract_Package** contains:
+
+* This folder contains a script that was designed to read text, filter common words/phrases, assign pre-defined text, check spelling and grammar and save metadata to a structured excel file for easy manipulation of data.
+
+**Face_Recogition_Package** contains:
+
+* This folder contains basic scripts, and workflow to detect and identify faces of political figures in photographic images. 
+
 **AV_Transcription_Package** contains:
 
 * AV_Transcript.py and notes files -  basic scripts for transcribing audio and video files
 * AV_Transcript-app.py and notes files - full script to create a portable 'app' or application to be used on multiple workstations without installing python or python interpreter. 
 * AV-enhanced-topic.py - script to identify and assign topics from a trained topic model, like the CAC_TOPICS_trainingmodel.csv mentioned above.
 
-**Extract_Package** contains:
-
-* This folder contains a script that was designed to read text, filter common words/phrases, assign pre-defined text, check spelling and grammar and save metadata to a structured excel file for easy manipulation of data. 
-
-**OCR_Package** contains:
-
-* This folder contains the entire downloadable package for a portable OCR application that can be used on multiple student workstations as a part of the day-to-day routine to read pdf or text files and extract text either (1) into a text file or (2) into an excel file with file names. 
