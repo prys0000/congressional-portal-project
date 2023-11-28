@@ -13,6 +13,7 @@ The congressional-portal-project provides a repository for workflows, methodolog
 
 * **handwritten documents** - the focus is on transcribing hard to read text, and collecting required metadata, quickly and efficiently
 * **conbination of handwritten and typewritten documents** - developing automated processes to read both handwritten and typewritten documents
+* **face recognition** - bulk processing recognition of faces in images with trained models, scripts, and lists
 * **transcribing A/V** - bulk transcription and extraction of audio/visual text greatly enhances workflow 
 * **transcribing A/V - topic modeling** - bulk transcription of audio/visual materials combined with adcanced topic identification increases productivity, accuracy, and efficiency
 * **migration and finding aid tranforms** - bulk processing for finding aid transforms involve creating or updating descriptive metadata and finding aids for archival collections
