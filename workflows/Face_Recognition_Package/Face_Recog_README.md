@@ -1,6 +1,6 @@
 ## Face_Recognition Package
 
-This folder contains the entire downloadable package to aid in creating a working model to detect and identify political figures from older collections (not found in many modern models). 
+This folder contains the entire downloadable package to aid in creating a working model to detect and identify political figures from older collections (not found in many modern models). This current dataset is a combination of manually selected images from the Carl Albert Center Collection and [Congressional Bioguide](http://bioguide.congress.gov/biosearch/biosearch.asp). 
 
 1. **Option one:** download our basic training images (Oklahoma focused)
 2. **Option two:** Create your own directory by:
@@ -16,6 +16,7 @@ This folder contains the entire downloadable package to aid in creating a workin
         │   ├── Person2-2.jpg
         │   ├── metadata.txt (or info.xml)
         ├── ...
+3. **Process Images:** use *dynammic.py* to standardize the images - resize, re-aspect, flip, and optimize and save all into a new 'output' folder. 
 3. **Training, Validation, and Test Splits:** Some datasets are further divided into training, validation, and test sets. In such cases, you might see subdirectories like "train," "val," and "test" within the "images" and "annotations" directories. This split helps in model training and evaluation.
 4. **Landmark or Keypoint Annotations:** For more advanced tasks, datasets may include annotations for facial landmarks or keypoints, which are specific points on a face (e.g., eyes, nose, mouth). These annotations are often used for facial landmark detection tasks.
 5. ***Optional:*** - Attributes and Labels: Datasets may contain attributes or labels associated with each face, such as age, gender, ethnicity, emotion, or identity.
