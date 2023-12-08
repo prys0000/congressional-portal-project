@@ -6,13 +6,11 @@ The congressional-portal-project provides a repository for workflows, methodolog
 
 ## december 2023 updates
 
-We are pleased to announce the successful [**rollout of our latest application and model**](https://github.com/prys0000/congressional-portal-project/tree/48598e68b63375d69ce1c0ab0f1a0847e5876abd/workflows/Collect_Extract_Describe_Package), which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and photographs.
+We are pleased to announce the successful [**rollout of our latest application and model**](https://github.com/prys0000/congressional-portal-project/tree/48598e68b63375d69ce1c0ab0f1a0847e5876abd/workflows/Collect_Extract_Describe_Package), which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and currently testing photograph collections.
 
 **Previous methodology:** Students working 10-15 hours per week were able to scan and collect metadata for an avergae of 55 documents per week. 
 
 **Document Processing:** Our new model has processed and collected data from a remarkable ***12,537 pages*** of archival materials, comprising typewritten and handwritten content.
-
-**Metadata Collection:** In addition, we have successfully described and collected metadata for ***800 scanned photograph*** images.
 
 **Error Resolution:** We identified and addressed ***150 errors*** related to misspelled months, such as "Vay" instead of "May" and "Mary" instead of "March." We have promptly resolved this issue, ensuring accurate data handling moving forward.
 
