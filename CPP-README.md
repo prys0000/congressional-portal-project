@@ -19,7 +19,7 @@ We are pleased to announce the successful **rollout of our latest application an
 ## folders:
   * [**documentation-applications-list**](https://github.com/prys0000/congressional-portal-project/tree/main/documentation-applications-lists) contains project worksheets, collection indexes, training models, and controlled vocabularies.
   * [**workflows**](https://github.com/prys0000/congressional-portal-project/tree/main/workflows) contains packaged workflows with either executable portable applications or consolidated/compiled scripts for OCRing, assigning controlled metadata, extracting specific text from OCR text.  
-  * [**python scripts and notes**](https://github.com/prys0000/congressional-portal-project/tree/main/scripts-notes) contains each individual script with corresponding notes to explain the script, the packages needed to make the package work, and steps for implementation. 
+  * [**depreciated-packages**](https://github.com/prys0000/congressional-portal-project/tree/fd6d08d9b49aca3662c194442de5afe67c168c3c/depreciated-packages) contains outdated scripts and notes that have been replaced by newer versions. 
 
 ## tasks simplified
 
