@@ -23,7 +23,7 @@ This folder contains the entire downloadable package to aid in creating a workin
         ├── ... 
 &nbsp; 
 
-* **Process Images:** use ${\color{purple}dave_dynamic.py}$ to standardize the images - resize, re-aspect, flip, and optimize and save all into a new 'output' folder.
+* **Process Images:** use ${\color{purple}dave.py}$ to standardize the images - resize, re-aspect, flip, and optimize and save all into a new 'output' folder.
 &nbsp;
 
 * **Training, Validation, and Test Splits:** Some datasets are further divided into training, validation, and test sets. In such cases, you might see subdirectories like "train," "val," and "test" within the "images" and "annotations" directories. This split helps in model training and evaluation.
