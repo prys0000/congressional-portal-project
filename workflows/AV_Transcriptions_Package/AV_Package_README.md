@@ -4,7 +4,7 @@ This package automates the transcription of audio from video files, stores the t
 
 * **Initialization:**
 
-    * Script #1, ${\color{blue}allan.py}$ begins by importing necessary libraries, including os for file operations, speech_recognition for speech recognition, moviepy.editor for working with video and audio files, pandas for data handling, and time for measuring script execution time.
+    * [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ begins by importing necessary libraries, including os for file operations, speech_recognition for speech recognition, moviepy.editor for working with video and audio files, pandas for data handling, and time for measuring script execution time.
 
 * **Recording Start Time:**
 
