@@ -6,7 +6,7 @@ The congressional-portal-project provides a repository for workflows, methodolog
 
 ## december 2023 updates
 
-We are pleased to announce the successful **rollout of our latest application and model**, which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and photographs.
+We are pleased to announce the successful [**rollout of our latest application and model**](https://github.com/prys0000/congressional-portal-project/tree/48598e68b63375d69ce1c0ab0f1a0847e5876abd/workflows/Collect_Extract_Describe_Package), which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and photographs.
 
 **Previous methodology:** Students working 10-15 hours per week were able to scan and collect metadata for an avergae of 55 documents per week. 
 
