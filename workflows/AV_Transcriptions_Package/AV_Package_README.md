@@ -62,7 +62,7 @@ This package automates the transcription of audio from video files, stores the t
     * ${\color{blue}allan.py}$ records the end time and calculates the total execution time.
  
 * **Topic, Subject, Project Specific Assignments:**
-    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/1ba2a14b0faa2a9f75552029b9ff4516cc72b148/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
+    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/6bed181aa5812ca8fb6fa5c595efbb141d76658c/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
  
         * **Training a Topic Model:**
           * ${\color{orange}beth.py}$ starts by training a topic model using a curated list of subjects from an Excel file. It preprocesses the subjects, creates a dictionary, and generates a corpus for topic modeling. 
