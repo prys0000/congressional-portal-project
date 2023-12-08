@@ -4,6 +4,18 @@
 
 The congressional-portal-project provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies, automated workflows, and to document strategies throughout the project timeline.  The project scope focuses on materials relating to the American Congress from the [Carl Albert Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection). Specific content information can be reviewed below.
 
+## december 2023 updates
+
+We are pleased to announce the successful **rollout of our latest application and model**, which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and photographs.
+
+**Previous methodology:** Students working 10-15 hours per week were able to scan and collect metadata for an avergae of 55 documents per week. 
+
+**Document Processing:** Our new model has processed and collected data from a remarkable ***12,537 pages*** of archival materials, comprising typewritten and handwritten content.
+
+**Metadata Collection:** In addition, we have successfully described and collected metadata for ***800 scanned photograph*** images.
+
+**Error Resolution:** We identified and addressed ***150 errors*** related to misspelled months, such as "Vay" instead of "May" and "Mary" instead of "March." We have promptly resolved this issue, ensuring accurate data handling moving forward.
+
 ## folders:
   * [**documentation-applications-list**](https://github.com/prys0000/congressional-portal-project/tree/main/documentation-applications-lists) contains project worksheets, collection indexes, training models, and controlled vocabularies.
   * [**workflows**](https://github.com/prys0000/congressional-portal-project/tree/main/workflows) contains packaged workflows with either executable portable applications or consolidated/compiled scripts for OCRing, assigning controlled metadata, extracting specific text from OCR text.  
