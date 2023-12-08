@@ -78,6 +78,7 @@ This package is designed to process large-scale collections of text and photogra
     * Finally, ${\color{green}helen.py}$ queues the preservation folders for long-term storage, ensuring that the archival resources are securely stored and accessible for the future.
 
 * **Customizability:**
+  
     * One of the key features of the script is its ***customizability***.
     * Users can configure various parameters and settings to adapt the data transformation and upload process to their specific needs and the requirements of different archival platforms.
 
