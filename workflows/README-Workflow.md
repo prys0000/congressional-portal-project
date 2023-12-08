@@ -8,7 +8,7 @@ This folder contains information and full workflow packages, topic and training 
 * [The-Policy-Agendas-Project](https://liberalarts.utexas.edu/government/news/feature-archive/the-policy-agendas-project.html)
 * [Congress.gov, Policy Area Term Vocabulary](https://www.congress.gov/browse/policyarea)
 * [Codebook for U.S. Senate Returns 1976–2018](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PEJ5QU)
-* {ICPSR Roster of United States Congressional Officeholders and Biographical Characteristics of Members of the United States Congress](https://www.icpsr.umich.edu/web/ICPSR/series/156)
+* [ICPSR Roster of United States Congressional Officeholders and Biographical Characteristics of Members of the United States Congress](https://www.icpsr.umich.edu/web/ICPSR/series/156)
 * [Federally Recognized Tribes - US Department of Interior, Indian Affairs](https://www.bia.gov/service/tribal-leaders-directory/federally-recognized-tribes)
 
 ## **Scripts and Files:**
