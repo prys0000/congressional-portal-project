@@ -62,10 +62,10 @@ This package automates the transcription of audio from video files, stores the t
     * ${\color{blue}allan.py}$ records the end time and calculates the total execution time.
  
 * **Topic, Subject, Project Specific Assignments:**
-    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/1ba2a14b0faa2a9f75552029b9ff4516cc72b148/workflows/AV_Transcriptions_Package/andrew-enhanced-topic.py), ${\color{orange}andrew.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
+    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/1ba2a14b0faa2a9f75552029b9ff4516cc72b148/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
  
         * **Training a Topic Model:**
-          * ${\color{orange}andrew.py}$ starts by training a topic model using a curated list of subjects from an Excel file. It preprocesses the subjects, creates a dictionary, and generates a corpus for topic modeling. 
+          * ${\color{orange}beth.py}$ starts by training a topic model using a curated list of subjects from an Excel file. It preprocesses the subjects, creates a dictionary, and generates a corpus for topic modeling. 
             * The number of topics is determined based on the number of subjects.
            
         * **Assigning Topics to Text:**
@@ -73,7 +73,7 @@ This package automates the transcription of audio from video files, stores the t
           * It preprocesses the input text, converts it to bag-of-words (BoW) format, and assigns topics using the trained LDA (Latent Dirichlet Allocation) model.
 
         * **Transcribing Videos and Assigning Topics:**
-          * ${\color{orange}andrew.py}$ prompts the user to enter the path of the folder containing video files.
+          * ${\color{orange}beth.py}$ prompts the user to enter the path of the folder containing video files.
           * It creates an output directory for transcriptions.
           * It uses the speech_recognition library to transcribe audio from video files.
           * For each video file (.mp4) in the specified folder: Audio is extracted from the video.
@@ -83,7 +83,7 @@ This package automates the transcription of audio from video files, stores the t
           * The results (filename and assigned subjects) are appended to the results list.
          
     * **Error Handling:**
-          * ${\color{orange}andrew.py}$ handles exceptions during audio transcription and processing.
+          * ${\color{orange}beth.py}$ handles exceptions during audio transcription and processing.
           * It retries file deletion multiple times to ensure the temporary audio files are deleted.
 
     * **Creating a DataFrame and Saving Results:**
