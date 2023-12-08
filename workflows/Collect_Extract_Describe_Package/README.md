@@ -25,27 +25,27 @@ This package is designed to process large-scale collections of text and photogra
 * **Export to Excel:**
     * The DataFrame is saved as an Excel file for further analysis or reporting. (*note: if conversion of file typoes are specified those items are also printed to the directory*)
 
-**Transform data for ArchivesSpace, Preservica, and NEH Congressonal Portal:** Script #2, ${\color{green}barbara.py}$ is designed to streamline a multi-step process that involves reading data from an Excel sheet, performing various checks and validations, highlighting potential errors, and ultimately transforming the data into platform-specific bulk uploads.
+**Transform data for ArchivesSpace, Preservica, and NEH Congressonal Portal:** Script #2, ${\color{green}helen.py}$ is designed to streamline a multi-step process that involves reading data from an Excel sheet, performing various checks and validations, highlighting potential errors, and ultimately transforming the data into platform-specific bulk uploads.
 
 * **Data Retrieval from Excel Sheet:**
 
-    * ${\color{green}barbara.py}$ begins by reading data from an Excel sheet. This data likely contains information related to archival resources, possibly in tabular format.
+    * ${\color{green}helen.py}$ begins by reading data from an Excel sheet. This data likely contains information related to archival resources, possibly in tabular format.
 
 * **Data Validation and Review:**
 
-    * After retrieving the data, ${\color{green}barbara.py}$ performs a series of validation checks to ensure data accuracy and consistency. It will check for missing or incorrect entries, missing metadata or inconsistent date formats.
+    * After retrieving the data, ${\color{green}helen.py}$ performs a series of validation checks to ensure data accuracy and consistency. It will check for missing or incorrect entries, missing metadata or inconsistent date formats.
 
 * **Spell Check:**
 
-    * ${\color{green}barbara.py}$ conducts a spell check to identify and highlight potential spelling errors in the data. This ensures that the textual content is free from typos or misspelled words.
+    * ${\color{green}helen.py}$ conducts a spell check to identify and highlight potential spelling errors in the data. This ensures that the textual content is free from typos or misspelled words.
 
 * **Error Identification:**
 
-    * ${\color{green}barbara.py}$ identifies and highlights other potential errors or inconsistencies within the data. These errors could be related to metadata, formatting, or any other relevant criteria.
+    * ${\color{green}helen.py}$ identifies and highlights other potential errors or inconsistencies within the data. These errors could be related to metadata, formatting, or any other relevant criteria.
 
 * **Data Transformation:**
 
-    * Once the data has been validated and potential errors are addressed, ${\color{green}barbara.py}$ proceeds to transform the data.
+    * Once the data has been validated and potential errors are addressed, ${\color{green}helen.py}$ proceeds to transform the data.
     * Transformation involves converting the data into a format that is compatible with various archival platforms.
     * This may include structuring the data hierarchically, generating XML files, and preparing files for upload.
 
@@ -56,17 +56,17 @@ This package is designed to process large-scale collections of text and photogra
 
 * **Resource Generation:**
 
-    * ${\color{green}barbara.py}$ generates multiple resources, such as folders, files, or items, based on the transformed data.
+    * ${\color{green}helen.py}$ generates multiple resources, such as folders, files, or items, based on the transformed data.
     * Original items in various file formats (e.g., .pdf, .txt, .doc, .jpg, .tif, .png) are included.
 
 * **XML Creation:**
 
-    * For each folder or item, ${\color{green}barbara.py}$ generates XML files that contain metadata and other necessary information for archival purposes.
+    * For each folder or item, ${\color{green}helen.py}$ generates XML files that contain metadata and other necessary information for archival purposes.
     * These XML files serve as structured representations of the resources.
 
 * **Hierarchy Maintenance:**
 
-    * ${\color{green}barbara.py}$ maintains the hierarchical structure of the data, ensuring that the relationships between items, folders, and collections are preserved.
+    * ${\color{green}helen.py}$ maintains the hierarchical structure of the data, ensuring that the relationships between items, folders, and collections are preserved.
 
 * **Preservation and Compression:**
 
@@ -75,7 +75,7 @@ This package is designed to process large-scale collections of text and photogra
 
 * **Queuing for Long-Term Storage:**
 
-    * Finally, ${\color{green}barbara.py}$ queues the preservation folders for long-term storage, ensuring that the archival resources are securely stored and accessible for the future.
+    * Finally, ${\color{green}helen.py}$ queues the preservation folders for long-term storage, ensuring that the archival resources are securely stored and accessible for the future.
 
 * **Customizability:**
 
