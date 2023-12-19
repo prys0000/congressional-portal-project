@@ -1,6 +1,15 @@
 ## AV_Transcription_Package
 
-This package automates the transcription of audio from video files, stores the transcriptions as TXT files (side-car), and compiles the results into an Excel file for easy access and analysis. It provides error handling and measures the execution time for monitoring script performance. Here's a summary of how it works:
+This package automates the transcription of audio from video files, stores the transcriptions as TXT files (side-car), and compiles the results into an Excel file for easy access and analysis. It provides error handling and measures the execution time for monitoring script performance. 
+
+For the ***congressional portal project*** the steps summarized are:
+* [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ transcribes video files and extracts to .txt file.
+* [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents.
+
+---
+
+
+Here's a summary of how it works:
 
 * **Initialization:**
 
