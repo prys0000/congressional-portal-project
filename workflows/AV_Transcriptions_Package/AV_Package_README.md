@@ -92,4 +92,4 @@ This package automates the transcription of audio from video files, stores the t
           * The results are saved as an Excel file with a specified path.
       
 * **Transforming into NEH Model:**
-    * [Script #3](), ${\color{green}GaryViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents. It uses various controlled and customizable libraries and APIs, for text generation, named entity recognition, and project specific data.
+    * [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents. It uses various controlled and customizable libraries and APIs, for text generation, named entity recognition, and project specific data.
