@@ -1,4 +1,33 @@
-## political ads updates using NEH-AI-CAC workflow
-CAC Archives
+# political ads updates using NEH-AI-CAC workflow
 
-### ad-worklow
+The Center, as part of the NEH Congressional Portal project, has included collection of 21,476 individual political ads from the United States House of Representatives, spanning 1962 to 2016 and covering all 50 states. This collection is part of the [Julian P. Kanter Political Collection](https://github.com/prys0000/political-commercial-collection-archives/blob/8b205dfce9a2e8329241ecf6b29b32f93750803c/README.md). 
+
+This section includes information, including the preparation processes for the Congressional Portal involving legacy metadata, NEH workflow data, and transformative processes:
+
+### preparation
+
+* [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ transcribes video files and extracts to .txt file.
+* [Script #3](https://github.com/prys0000/congressional-portal-project/blob/33f76bbef9756fe81bfceb7e2491f4840a2d9eea/workflows/AV_Transcriptions_Package/garyviiii.py), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents.
+
+### initial analysis (scroll left/right for entire table)
+
+| FILENAME      | E_YEAR | NAME_LAST,FIRST             | TITLE-(legacy)  | SUMMARY-(legacy)                                      | Summary-(allan.py)                                                                                                                         | SUBJECTS - (legacy)               | Subjects-(allan.py)                                            | Sentiment-(allan.py) | ICPSR_INFO-(allan.py) | Tribes-(allan.py) | Policies-(allan.py)                           | Congress-(allan.py)             | STATE-(legacy) | AGENCIES-(legacy)    | PARTY-(legacy)     | FORMAT-(legacy)            | Named Entities-(allan.py)                             |
+|---------------|--------|-----------------------------|-----------------|------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|----------------------------------------------------------------|----------------------|-----------------------|-------------------|------------------------------------------------|--------------------------------|----------------|----------------------|--------------------|---------------------------|------------------------------------------------|
+| P-1024-41489  | 1988   | Farrier, Marshall           | Leadership      | Candidate discussing his leadership qualifications   | Marshall Farrier, a rancher and oil industry veteran, is running for Congress in Oklahoma's 2nd District...                                | Leadership                        | Taxation Law and legislation (United States)                  | positive              |                       |                   | Taxation, Energy                             | 100th Congress (1987-1989)      | Oklahoma       | Direct               | Republican Party   | 3/4" videotape             | Marshall, Oklahoma, Republican, congress, 23 years... |
+| P-1025-41515  | 1988   | Inhofe, James Mountain (Jim) | Reagan          | Typical talking head endorsement of candidate.        | Urging people to vote for Jim Inhofe, a politician from Oklahoma...                                                                        | Endorsement                       | Character (leans heavy on character and values)...             | positive              |                       |                   | Government Operations and Politics...          | 100th Congress (1987-1989)      | Oklahoma       | BMC Advertising      | Republican Party   | 3/4" videotape             | one, Jim, first, Tulsa, Oklahoma, Washington, Jim... |
+| P-1477-72757  | 1992   | Edmondson, William Andrew   | Special Interest | Voiceover says opponent not candidate is the one...   | Over two weeks since the primary election, and Mike Sinar continues to attack his opponent...                                              | Campaign Finance                 | Banking Finance and Domestic Commerce...                     | negative and attacking |                       | Delaware          |                                                | 102nd Congress (1991-1993)      | Oklahoma       | Austin and Sheinkopf | Democratic Party   | 3/4" videotape             | 2 weeks, Mike Sinar, Mike, Drew Edmonson...               |
+| P-1966-133046 | 2010   | Lankford, James             | Competent Voice  | Spot features family and supporters talking about...  | Urging people to vote for James Lankford, a Conservative Republican, for the United States Congress...                                       | Trust Record                      | Republican Party Religion                                      | positive              | ICPSR: 21166 -...    | Creek             |                                                | 111th Congress (2009-2011)      | Oklahoma       |                      | Republican Party   | Digital Download (live...) | Republicans, Washington, James Lankford, Republican...       |
+| P-1025-41516  | 1988   | Inhofe, James Mountain (Jim) | Reardon/jobs    | Man on the street endorsement followed by candidate... | Jim Inhofe is a conservative Congressman who has been effective in saving jobs and promoting economic development...                         | Endorsement Jobs                  | Republican Party Labor and Jobs                                | positive              |                       |                   | Economics and Public Finance                   | 100th Congress (1987-1989)      | Oklahoma       | BMC Advertising      | Republican Party   | 3/4" videotape             | Jim, Hoff, EPA, Jim, Saving, 500 Steel Workers, FAA, Tulsa |
+
+### similarty/difference
+Note the summaries and subjects from legacy information compared to the NEH project transformation package ${\color{green}garyViii.py}$ :
+
+![summary-subject](https://github.com/prys0000/congressional-portal-project/blob/d6dc97219882b8a1e047af4901e88aafb0a57ae7/documentation-applications-lists/av2.jpg)
+
+Note the yellow highlighted columns with newly generated data from NEH transformation package  ${\color{green}garyViii.py}$ :
+
+![sentiment-ICPSR-tribes-policies-congress](https://github.com/prys0000/congressional-portal-project/blob/53a35cc4ff9b06014bcd0af9cc143af03f042f5f/documentation-applications-lists/av3.jpg)
+
+### advantages
+With over 21,000 individual files, complex analysis and metadata collection packges increase productivity, standardize terminology, and allows for complex interpretation of moving images and audio. Sentiment analysis, automated matching of standardized political science identification codes, and extraction of additional data for file migration and long-term discoverability improves quality of archival processing which also enhances file preservation and stability. 
+
