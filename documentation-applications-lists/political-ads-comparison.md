@@ -7,7 +7,7 @@ This section includes information, including the preparation processes for the C
 ### preparation
 
 * [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ transcribes video files and extracts to .txt file.
-* [Script #3](https://github.com/prys0000/congressional-portal-project/blob/33f76bbef9756fe81bfceb7e2491f4840a2d9eea/workflows/AV_Transcriptions_Package/garyviiii.py), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents.
+* [Script #3](https://github.com/prys0000/congressional-portal-project/blob/84928e16664229a73b210fc2d05ff84c0eae8599/workflows/AV_Transcriptions_Package/garyvidiii.py), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents.
 
 ### initial analysis (scroll left/right for entire table)
 
