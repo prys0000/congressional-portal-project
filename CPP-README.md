@@ -2,13 +2,31 @@
 
 # congressional-portal-project
 
-The congressional-portal-project provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies, automated workflows, and to document strategies throughout the project timeline.  The project scope focuses on materials relating to the American Congress from the [Carl Albert Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection). Specific content information can be reviewed below.
+The congressional-portal-project provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies, and automated workflows, and to document strategies throughout the project timeline.  The project scope focuses on materials relating to the American Congress from the [Carl Albert Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection). Specific content information can be reviewed below.
+
+## january 2024 updates
+
+The new [**American Congress Digital Archives Portal**](https://congressarchives.org/) link has been established. The Center has submitted a total of 2,139 individual items, comprising 16,540 pages of text, including both typed and handwritten content that can be searched, as well as 100 video files. These materials are currently under review by the project manager. 
+
+This first submission for review includes subjects related to both American Indian Sovereignty and Oklahoma Congressional Representation. 
+
+| Collection                   | Dates         |
+|------------------------------|---------------|
+| Carl Albert Collection       | 1947-1971     |
+| Dewey F. Bartlett Collection | 1973-1978     |
+| John Happy Camp Collection   | 1969-1973     |
+| Fred R. Harris Collection    | 1961-1976     |
+| Robert L. Owen Collection    | 1913-1947     |
+| Elmer Thomas Collection      | 1923-1950     |
+| James R. Jones Collection    | 1973-1986     |
+| Julian P. Kanter Collection  | 1984-1988     |
+
 
 ## december 2023 updates
 
 We are pleased to announce the successful [**rollout of our latest application and model**](https://github.com/prys0000/congressional-portal-project/tree/48598e68b63375d69ce1c0ab0f1a0847e5876abd/workflows/Collect_Extract_Describe_Package), which has significantly enhanced our capabilities in text interpretation, metadata collection, sentiment analysis, tone recognition, and other forms of data extraction from archival text and currently testing photograph collections.
 
-**Previous methodology:** Students working 10-15 hours per week were able to scan and collect metadata for an avergae of 55 documents per week. 
+**Previous methodology:** Students working 10-15 hours per week were able to scan and collect metadata for an average of 55 documents per week. 
 
 **Document Processing:** Our new model has processed and collected data from a remarkable ***12,537 pages*** of archival materials, comprising typewritten and handwritten content.
 
