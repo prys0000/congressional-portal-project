@@ -6,9 +6,9 @@ The congressional-portal-project provides a repository for workflows, methodolog
 
 ## january 2024 updates
 
-The new [**American Congress Digital Archives Portal**](https://congressarchives.org/) link has been established. The Center has submitted a total of 2,139 individual items, comprising 16,540 pages of text, including both typed and handwritten content that can be searched, as well as 100 video files. These materials are currently under review by the project manager. 
+The new [**American Congress Digital Archives Portal**](https://congressarchives.org/) link has been established. The Center has submitted 2,139 individual items, comprising 16,540 pages of text, including both typed and handwritten content that can be searched, and 100 video files. These materials are currently under review by the project manager. 
 
-This first submission for review includes subjects related to both American Indian Sovereignty and Oklahoma Congressional Representation. 
+This first submission for review includes subjects related to American Indian Sovereignty and Oklahoma Congressional Representation. 
 
 | Collection                   | Dates         |
 |------------------------------|---------------|
