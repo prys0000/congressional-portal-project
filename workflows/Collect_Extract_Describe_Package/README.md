@@ -5,7 +5,7 @@ This package is designed to process large-scale collections of text and photogra
 **Key functionalities:**
 
 * **Scripts:**
-    * **Script #1**, **${\color{green}allen-free}$** contains the imports and libraries for free-open text extraction and .txt file creation.
+    * [**Script #1**](https://github.com/prys0000/congressional-portal-project/blob/d7b4b6fa094744b69b3e2341df11d8d29f1877b5/workflows/Collect_Extract_Describe_Package/allen-free.py), **${\color{green}allen-free}$** contains the imports and libraries for free-open text extraction and .txt file creation.
     * **Script #1.2**, **${\color{teal}allen-text}$** contains the imports and libraries for AWS-Txtract paid service to detect text and create .txt.
     * **Script #2**, **${\color{red}gary. py}$** contains the imports and libraries such as spaCy, pandas, and others. It also sets up API keys, directories, and global variables.
     * **Script #3**, **${\color{blue}helen.py}$** contains the imports and libraries preprocesses and transforms data from an Excel file, converting date strings to datetime objects, renaming columns, setting static column values, reordering columns, and saving the updated data to a new metadata mapped excel file.
