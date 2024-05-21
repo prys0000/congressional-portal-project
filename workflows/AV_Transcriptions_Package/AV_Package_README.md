@@ -1,10 +1,11 @@
 ## AV_Transcription_Package
 
-This package automates the transcription of audio from video files, stores the transcriptions as TXT files (side-car), and compiles the results into an Excel file for easy access and analysis. It provides error handling and measures the execution time for monitoring script performance. 
+This package automates audio transcription from video files, stores the transcriptions as TXT files (side-car), and compiles the results into an Excel file for easy access and analysis. It provides error handling and measures the execution time to monitor script performance. 
 
-For the ***congressional portal project*** the steps summarized are:
-* [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ transcribes video files and extracts to .txt file.
-* [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents.
+For the ***congressional portal project***, the steps summarized are:
+* [Script #1](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/allison.py), ${\color{blue}allison.py}$ transcribes video files and extracts to .txt file.
+* [Script #2](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
+* [Script #3](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/garyvidiii.py), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentiment, and specified metadata from their contents.
 
 ---
 
@@ -13,11 +14,11 @@ Here's a summary of how it works:
 
 * **Initialization:**
 
-    * [Script #1](https://github.com/prys0000/congressional-portal-project/blob/34834ef179e9d98a9b19a2c029626001f26602d7/workflows/AV_Transcriptions_Package/allan.py), ${\color{blue}allan.py}$ begins by importing necessary libraries, including os for file operations, speech_recognition for speech recognition, moviepy.editor for working with video and audio files, pandas for data handling, and time for measuring script execution time.
+    * [Script #1](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/allison.py)), ${\color{blue}allison.py}$ begins by importing necessary libraries, including os for file operations, speech_recognition for speech recognition, moviepy.editor for working with video and audio files, pandas for data handling, and time for measuring script execution time.
 
 * **Recording Start Time:**
 
-    * ${\color{blue}allan.py}$ records the start time to measure the execution time.
+    * ${\color{blue}allison.py}$ records the start time to measure the execution time.
 
 * **Recognizer Initialization:**
 
@@ -25,12 +26,12 @@ Here's a summary of how it works:
 
 * **Folder Path and Output Directory:**
 
-    * ${\color{blue}allan.py}$ specifies the folder path containing video files and creates an empty list, results, to store the transcription results.
+    * ${\color{blue}allison.py}$ specifies the folder path containing video files and creates an empty list of results to store the transcription results.
     * It also defines an output directory where TXT files containing transcriptions will be saved.
 
 * **Iterating Through Video Files:**
 
-    * ${\color{blue}allan.py}$ iterates through the files in the specified folder.
+    * ${\color{blue}allison.py}$ iterates through the files in the specified folder.
     * For each video file, it performs the following steps:
     * Loads the video file using moviepy.
     * Extracts audio from the video.
@@ -39,7 +40,7 @@ Here's a summary of how it works:
 
 * **Speech Recognition:**
 
-    * ${\color{blue}allan.py}$ uses Google Speech Recognition to transcribe the audio.
+    * ${\color{blue}allison.py}$ uses Google Speech Recognition to transcribe the audio.
     * The transcribed text is stored in the transcript variable.
 
 * **Storing Results:**
@@ -49,7 +50,7 @@ Here's a summary of how it works:
 
 * **Error Handling:**
 
-    * ${\color{blue}allan.py}$ handles exceptions, such as UnknownValueError and RequestError, which can occur during transcription.
+    * ${\color{blue}allison.py}$ handles exceptions, such as UnknownValueError and RequestError, which can occur during transcription.
     * Temporary audio files are deleted after processing.
 
 * **Data Validation:**
@@ -58,27 +59,27 @@ Here's a summary of how it works:
 
 * **Creating a DataFrame:**
 
-    * If the lengths match, ${\color{blue}allan.py}$ creates a pandas DataFrame with columns for filenames and transcripts.
+    * If the lengths match, ${\color{blue}allison.py}$ creates a pandas DataFrame with columns for filenames and transcripts.
     * An additional column for file names (without extensions) is added.
 
 * **Saving Transcriptions:**
 
-    * ${\color{blue}allan.py}$ saves the DataFrame as an Excel file in the specified output directory.
+    * ${\color{blue}allison.py}$ saves the DataFrame as an Excel file in the specified output directory.
     * A message is printed to confirm the successful saving of transcripts.
 
 * **Recording End Time:**
 
-    * ${\color{blue}allan.py}$ records the end time and calculates the total execution time.
+    * ${\color{blue}allison.py}$ records the end time and calculates the total execution time.
  
 * **Topic, Subject, Project Specific Assignments:**
-    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/6bed181aa5812ca8fb6fa5c595efbb141d76658c/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
+    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
  
         * **Training a Topic Model:**
           * ${\color{orange}beth.py}$ starts by training a topic model using a curated list of subjects from an Excel file. It preprocesses the subjects, creates a dictionary, and generates a corpus for topic modeling. 
             * The number of topics is determined based on the number of subjects.
            
         * **Assigning Topics to Text:**
-          * A function assign_topics_to_text is defined to assign topics to text.
+          * A function assign_topics_to_text is defined as assigning topics to text.
           * It preprocesses the input text, converts it to bag-of-words (BoW) format, and assigns topics using the trained LDA (Latent Dirichlet Allocation) model.
 
         * **Transcribing Videos and Assigning Topics:**
@@ -101,4 +102,4 @@ Here's a summary of how it works:
           * The results are saved as an Excel file with a specified path.
       
 * **Transforming into NEH Model:**
-    * [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentimnt and specified metadata from their contents. It uses various controlled and customizable libraries and APIs, for text generation, named entity recognition, and project specific data.
+    * [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentiment, and specified metadata from their contents. It uses various controlled and customizable libraries and APIs for text generation, named entity recognition, and project-specific data.
