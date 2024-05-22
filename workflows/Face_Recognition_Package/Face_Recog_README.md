@@ -27,9 +27,8 @@ This folder contains the entire downloadable package to help create a working mo
     * Calculates face distances and determines the best match.
     * Converts the results dictionary to a DataFrame.
     * Saves the DataFrame to an Excel file.
- 
 &nbsp;
-&nbsp;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * **Option two:** Create your own directory by:
 &nbsp;
 
@@ -48,7 +47,7 @@ This folder contains the entire downloadable package to help create a working mo
         ├── ... 
 &nbsp; 
 
-* **Process Images:** use ${\color{purple}dave.py}$ to standardize the images - resize, re-aspect, flip, and optimize and save all into a new 'output' folder.
+* **Process Images:** use ${\color{purple}dave.py}$ to standardize the images - resize, re-aspect, flip, optimize, and save all into a new 'output' folder.
 &nbsp;
 
 * **Training, Validation, and Test Splits:** Some datasets are divided into training, validation, and test sets. In such cases, you might see subdirectories like "train," "val," and "test" within the "images" and "annotations" directories. This split helps in model training and evaluation.
@@ -69,3 +68,18 @@ This folder contains the entire downloadable package to help create a working mo
     * Using your new dataset, use FaceNet to create a *FaceNet model*.
     * Evaluate your model on small training sets.
     * ***Note***:*You don't need XML annotations for bounding boxes in the context of FaceNet because it focuses on face recognition based on embeddings rather than object detection. Instead, you'll work with the embeddings directly to compare and recognize faces.*
+&nbsp;
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* **Advanced training and directional detection:** This process will enhance face recognition by incorporating directional positions (like left, right, or straight)
+&nbsp;
+    * Manually add faces from Option 1 that are multidirectional angles of the individual:
+&nbsp;
+ 
+     <img src="https://www.dropbox.com/scl/fi/aokw2lpkof4pebxgf53yl/Carl-Albert-1.jpg?rlkey=d67jg1wzpbzqh9vs3621er4uf&st=x0zk6gl6&raw=1" alt="Dropbox Image" width="250" height="325">
+  
+   <img src="https://www.dropbox.com/scl/fi/5ox564mimprhc1cqea3s2/Carl-Albert-left-2.jpg?rlkey=39kmi87xxk5qlfl3dhd9mtpq5&st=zotyo7ty&raw=1" alt="Dropbox Image" width="275" height="325">
+   
+   <img src="https://www.dropbox.com/scl/fi/pmwq0vy1pqo1bmhiqvcgu/Carl-Albert-right-1.jpg?rlkey=v7l9bgiwv5cnpdpgbftc87s21&st=yb3pyebn&raw=1" alt="Dropbox Image" width="275" height="325">
+  
+  
+  
