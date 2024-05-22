@@ -1,10 +1,33 @@
 ## Face_Recognition Package
 
-This folder contains the entire downloadable package to aid in creating a working model to detect and identify political figures from older collections (not found in many modern models). This current dataset is a combination of manually selected images from the Carl Albert Center Collection and [Congressional Bioguide](http://bioguide.congress.gov/biosearch/biosearch.asp). 
+This folder contains the entire downloadable package to help create a working model to detect and identify political figures from older collections (not found in many modern models). This current dataset combines manually selected images from the Carl Albert Center Collection and [Congressional Bioguide](http://bioguide.congress.gov/biosearch/biosearch.asp). 
 
-* **Option one:** download our basic training images (Oklahoma focused)
+* **Option one:** Download our basic training images (Oklahoma-focused)
 &nbsp;
 
+* **Employ ${\color{purple}lucille.py}$:** Use this option to test our library and get familiar with annotating and creating a starting place. The **script ${\color{purple}lucille.py}$** processes a folder containing subfolders of identified face images, generates face encodings for each image, and saves these encodings to a .pkl file. 
+&nbsp;
+    * Loads images from a specified directory and its subdirectories
+    * Uses the face_recognition library to generate face encodings for each image.
+    * Labels each encoding based on the name of the subdirectory containing the image.
+    * Stores the labeled encodings in a dictionary.
+    * Serializes the dictionary of encodings and saves it to a file for later use in face recognition tasks.
+ &nbsp;
+* **Next run ${\color{blue}leon.py}$:** This **script ${\color{blue}leon.py}$** performs face recognition on a set of images with unidentified people, using precomputed face encodings of identified people. The results are saved to an Excel file.
+&nbsp;
+    * First, the script loads the precomputed face encodings from a pickle file.
+    * Flattens the dictionary of face encodings into two lists: one for the encodings and one for the corresponding labels.
+    * Specifies the path to the folder containing images with unidentified people.
+    * Loops through each file in the unidentified_faces_folder.
+    * Loads the image and detects faces and their encodings.
+    * Compares each face encoding with known face encodings.
+    * If a match is found within the tolerance level, assigns the corresponding label. Otherwise, assigns "Unknown".
+    * Calculates face distances and determines the best match.
+    * Converts the results dictionary to a DataFrame.
+    * Saves the DataFrame to an Excel file.
+ 
+&nbsp;
+&nbsp;
 * **Option two:** Create your own directory by:
 &nbsp;
 
@@ -26,21 +49,21 @@ This folder contains the entire downloadable package to aid in creating a workin
 * **Process Images:** use ${\color{purple}dave.py}$ to standardize the images - resize, re-aspect, flip, and optimize and save all into a new 'output' folder.
 &nbsp;
 
-* **Training, Validation, and Test Splits:** Some datasets are further divided into training, validation, and test sets. In such cases, you might see subdirectories like "train," "val," and "test" within the "images" and "annotations" directories. This split helps in model training and evaluation.
+* **Training, Validation, and Test Splits:** Some datasets are divided into training, validation, and test sets. In such cases, you might see subdirectories like "train," "val," and "test" within the "images" and "annotations" directories. This split helps in model training and evaluation.
 &nbsp;
 
-* **Landmark or Keypoint Annotations:** For more advanced tasks, datasets may include annotations for facial landmarks or keypoints, which are specific points on a face (e.g., eyes, nose, mouth). These annotations are often used for facial landmark detection tasks.
+* **Landmark or Keypoint Annotations:** For more advanced tasks, datasets may include annotations for facial landmarks or key points, which are specific points on a face (e.g., eyes, nose, mouth). These annotations are often used for facial landmark detection tasks.
 &nbsp;
 
 * ***Optional:*** - Attributes and Labels: Datasets may contain attributes or labels associated with each face, such as age, gender, ethnicity, emotion, or identity.
 &nbsp;
 
-* **Find a face detection model:** (We use [FaceNet](https://arxiv.org/abs/1503.03832)) for a starting place for face verification and face clustering tasks, where the goal is to compare and recognize faces based on their embeddings (vectors) rather than annotating bounding boxes around individual faces in images.
+* **Find a face detection model (FaceNet):** (We use [FaceNet](https://arxiv.org/abs/1503.03832)) for a starting place for face verification and face clustering tasks, where the goal is to compare and recognize faces based on their embeddings (vectors) rather than annotating bounding boxes around individual faces in images.
 &nbsp;
 
-    * Face detection libraries ([OpenCV](https://github.com/opencv/opencv) or [dlib](https://github.com/davisking/dlib)) detect the faces in each image, crop and align, to detect a dataset.
+    * Face detection libraries ([OpenCV](https://github.com/opencv/opencv) or [dlib](https://github.com/davisking/dlib)) detect the faces in each image, crop, and align to detect a dataset.
     * FaceNet will generate embeddings (through vectors) for each face/image.
-    * If using labeled data you can apply this feature to associate known faces.
+    * Using labeled data, you can apply this feature to associate known faces.
     * Using your new dataset, use FaceNet to create a *FaceNet model*.
-    * Evaluate your model on small traning sets.
+    * Evaluate your model on small training sets.
     * ***Note***:*You don't need XML annotations for bounding boxes in the context of FaceNet because it focuses on face recognition based on embeddings rather than object detection. Instead, you'll work with the embeddings directly to compare and recognize faces.*
