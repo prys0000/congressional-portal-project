@@ -1,8 +1,10 @@
 ## Face_Recognition Package
 
-This folder contains the entire downloadable package to help create a working model to detect and identify political figures from older collections (not found in many modern models). This current dataset combines manually selected images from the Carl Albert Center Collection and [Congressional Bioguide](http://bioguide.congress.gov/biosearch/biosearch.asp). 
+This folder contains the entire downloadable package to help create a working model to detect and identify political figures from older collections (not found in many modern models). This dataset combines manually selected images from the Carl Albert Center Collection and [Congressional Bioguide](http://bioguide.congress.gov/biosearch/biosearch.asp). 
 
-* **Option one:** Download our basic training images (Oklahoma-focused)
+* **Option one:** Download our basic training images (Oklahoma-focused) - [Download from this folder](https://www.dropbox.com/scl/fo/68q2316c06buj05laj6ns/AFHg7N-8tdALlzyRwXWV4JM?rlkey=kkhem25h4zre8vtzh5s3ireu9&st=918epzdp&dl=0)
+    * **Folder *Oklahoma_Imags_TestGroup*** holds a small group of folders with the faces of Oklahoma-focused individuals.
+    * **Folder *Test_folder_Unidentified_Images*** holds a small test group of images that you can use to test the base-level script to get comfortable with how the recognition works. 
 &nbsp;
 
 * **Employ ${\color{purple}lucille.py}$:** Use this option to test our library and get familiar with annotating and creating a starting place. The **script ${\color{purple}lucille.py}$** processes a folder containing subfolders of identified face images, generates face encodings for each image, and saves these encodings to a .pkl file. 
