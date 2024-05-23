@@ -74,17 +74,19 @@ This folder contains the entire downloadable package to help create a working mo
 &nbsp;
 * Manually add faces from Option 1 that are multidirectional angles of the individual:
 &nbsp;
- 
-     <img src="https://www.dropbox.com/scl/fi/aokw2lpkof4pebxgf53yl/Carl-Albert-1.jpg?rlkey=d67jg1wzpbzqh9vs3621er4uf&st=x0zk6gl6&raw=1" alt="Dropbox Image" width="250" height="325">
-  
-   <img src="https://www.dropbox.com/scl/fi/5ox564mimprhc1cqea3s2/Carl-Albert-left-2.jpg?rlkey=39kmi87xxk5qlfl3dhd9mtpq5&st=zotyo7ty&raw=1" alt="Dropbox Image" width="275" height="325">
+
+<img src="https://www.dropbox.com/scl/fi/aokw2lpkof4pebxgf53yl/Carl-Albert-1.jpg?rlkey=d67jg1wzpbzqh9vs3621er4uf&st=x0zk6gl6&raw=1" alt="Dropbox Image" width="250" height="325">   <img src="https://www.dropbox.com/scl/fi/5ox564mimprhc1cqea3s2/Carl-Albert-left-2.jpg?rlkey=39kmi87xxk5qlfl3dhd9mtpq5&st=zotyo7ty&raw=1" alt="Dropbox Image" width="275" height="325">   <img src="https://www.dropbox.com/scl/fi/pmwq0vy1pqo1bmhiqvcgu/Carl-Albert-right-1.jpg?rlkey=v7l9bgiwv5cnpdpgbftc87s21&st=yb3pyebn&raw=1" alt="Dropbox Image" width="275" height="325">
    
-   <img src="https://www.dropbox.com/scl/fi/pmwq0vy1pqo1bmhiqvcgu/Carl-Albert-right-1.jpg?rlkey=v7l9bgiwv5cnpdpgbftc87s21&st=yb3pyebn&raw=1" alt="Dropbox Image" width="275" height="325">
   
  * Export the downloaded folder from Option 1, test images.
  * Create a .csv with two columns, 'filename' and 'direction'.
- * The 'filename' will be in this format - Carl_albert_1.jpg and the 'direction' will be 'straight','left', 'right'.
+ * The 'filename' will be in this format - Carl_albert_1.jpg and the 'direction' will be 'straight','left', 'right' - save this .csv as 'annotations.csv'
      * filename = Carl_Albert_1.jpg      Direction = straight
      * filename = Carl Albert_2.jpg      Direction = left
      * filename = Carl_Abert_3.jpg       Direction = right
+* Run the **script ${\color{green}gerry.py}$** that processes a folder of identified face images, extracts their facial encodings, and associates them with directional annotations from a CSV file. The results are saved into a pickle file for later use ***[see the .pkl file below with measurements/encodings and saves them in a 'dictonary']***.
+&nbsp;
+
+<img src="https://www.dropbox.com/scl/fi/sky43iwpe3lguduv43pyg/carl_meas.png?rlkey=6wae25dg0xsth0eglooz4ja8k&st=nbz17mxt&raw=1" alt="Dropbox Image" width="600" height="600">
+
   
