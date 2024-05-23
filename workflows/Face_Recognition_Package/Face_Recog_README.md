@@ -81,5 +81,10 @@ This folder contains the entire downloadable package to help create a working mo
    
    <img src="https://www.dropbox.com/scl/fi/pmwq0vy1pqo1bmhiqvcgu/Carl-Albert-right-1.jpg?rlkey=v7l9bgiwv5cnpdpgbftc87s21&st=yb3pyebn&raw=1" alt="Dropbox Image" width="275" height="325">
   
-  
+ * Export the downloaded folder from Option 1, test images.
+ * Create a .csv with two columns, 'filename' and 'direction'.
+ * The 'filename' will be in this format - Carl_albert_1.jpg and the 'direction' will be 'straight','left', 'right'.
+     * filename = Carl_Albert_1.jpg      Direction = straight
+     * filename = Carl Albert_2.jpg      Direction = left
+     * filename = Carl_Abert_3.jpg       Direction = right
   
