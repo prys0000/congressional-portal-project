@@ -2,13 +2,41 @@
 
 ## Overview
 
-This repository contains scripts and batch processes designed to automate large-scale archival workflows. The primary goal is to streamline extracting, analyzing, and enriching metadata from archival text files using Natural Language Processing (NLP) techniques and OpenAI's GPT models. This automation is crucial for managing extensive archival collections efficiently, ensuring consistent metadata quality, and enabling advanced data analysis.
+This repository contains scripts and batch processes designed to automate large-scale archival workflows. The primary goal is to streamline the extraction, analysis, and enrichment of metadata from archival text files using Natural Language Processing (NLP) techniques and OpenAI's GPT models. This automation is crucial for efficiently managing extensive archival collections, ensuring consistent metadata quality, and enabling advanced data analysis.
 
-## Importance to Large-Scale Archival Workflows
+## Table of Contents
+
+- [Importance for Large-Scale Archival Workflows](#importance-for-large-scale-archival-workflows)
+- [Workflow Overview](#workflow-overview)
+- [Steps in the Process](#steps-in-the-process)
+  - [1. Environment Setup](#1-environment-setup)
+  - [2. Configuration](#2-configuration)
+  - [3. Main Pipeline Execution](#3-main-pipeline-execution)
+  - [4. Data Extraction and Initial Processing](#4-data-extraction-and-initial-processing)
+  - [5. Subject and Creator Assignment](#5-subject-and-creator-assignment)
+  - [6. Data Integration and Final Output Generation](#6-data-integration-and-final-output-generation)
+- [Script Explanations](#script-explanations)
+  - [`step-1-setup_and_run.bat`](#step-1-setup_and_runbat)
+  - [`step-2-run-gary.bat`](#step-2-run-garybat)
+  - [`3pipeline.py`](#3pipelinepy)
+  - [`2-gary-primed.py`](#2-gary-primedpy)
+  - [`redosubcreator.py`](#redosubcreatorpy)
+  - [`3-POST-GOOD.py`](#3-post-goodpy)
+  - [`requirements.txt`](#requirementstxt)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Execution](#execution)
+- [Workflow Diagram](#workflow-diagram)
+- [Additional Notes](#additional-notes)
+
+
+## Importance for Large-Scale Archival Workflows
 
 Large-scale archival projects often involve processing thousands of documents, which can be time-consuming and prone to human error if done manually. Automating these workflows:
 
-- **Enhances Efficiency**: Speeds up the processing time significantly.
+- **Enhances Efficiency**: Significantly speeds up processing time.
 - **Improves Consistency**: Ensures uniform metadata standards across the collection.
 - **Enables Scalability**: Allows for handling larger datasets without a proportional increase in resources.
 - **Facilitates Advanced Analysis**: Extracted metadata can be used for in-depth research and discovery.
@@ -54,7 +82,7 @@ step-1-setup_and_run.bat
   - Base directory where scripts are located.
   - Input directory containing `.txt` files.
   - Full paths to the main scripts.
-- Collects the OpenAI API key (hardcoded for security in this example).
+- Collects the OpenAI API key securely from the user.
 - Dynamically generates a `config.json` file based on user inputs.
 - Runs the pipeline script (`3pipeline.py`).
 
@@ -124,7 +152,7 @@ This script requires three arguments and is called by `3pipeline.py`:
 python 3-POST-GOOD.py <input_file> <updated_excel_file> <output_file>
 ```
 
-## Scripts Explanation
+## Script Explanations
 
 ### `step-1-setup_and_run.bat`
 
@@ -186,7 +214,7 @@ python 3-POST-GOOD.py <input_file> <updated_excel_file> <output_file>
 - **Notable Packages**:
   - `openai==0.27.8`: OpenAI API client compatible with the scripts.
   - `spacy==3.7.6`: For NLP tasks.
-  - `en_core_web_sm`: SpaCy's English language model.
+  - `en_core_web_sm`: spaCy's English language model.
   - `pandas`: Data manipulation.
   - `nltk`: Natural language processing.
   - `openpyxl`: Excel file handling.
@@ -220,12 +248,12 @@ python 3-POST-GOOD.py <input_file> <updated_excel_file> <output_file>
 ### Configuration
 
 - **Input Data**: Place your `.txt` files in the designated input directory.
-- **API Key**: The OpenAI API key should be entered when prompted or hardcoded in the `config.json` generation step.
+- **API Key**: You will be prompted to enter your OpenAI API key during the configuration step. Ensure that your API key is kept secure and not hardcoded into any scripts.
 
 ### Execution
 
 - Run `step-2-run-gary.bat` to configure and execute the pipeline.
-- Follow any prompts provided during execution.
+- Follow the prompts provided during execution.
 
 ## Workflow Diagram
 
@@ -242,8 +270,12 @@ flowchart TD
 
 ## Additional Notes
 
-- **Error Handling**: Errors are logged to `errors.log`.
+- **Error Handling**: Errors are logged to `errors.log` for troubleshooting.
 - **Data Privacy**: Ensure compliance with data protection regulations when handling sensitive data.
-- **Customization**: Controlled vocabularies and mappings can be customized within the scripts to suit specific archival needs.
+- **Customization**:
+  - **Controlled Vocabularies**: Controlled vocabularies and mappings can be customized within the scripts to suit specific archival needs.
+  - **Static Metadata**: Static metadata fields in `3-POST-GOOD.py` can be adjusted as required.
 
+---
 
+Feel free to contribute to this project by submitting issues or pull requests. Your feedback and enhancements are welcome!
