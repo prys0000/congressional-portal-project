@@ -1,0 +1,20 @@
+{
+    "base_path": "F:/BASE_PATH",
+    "input_directory": "F:/PATH",
+    "outputs": {
+        "2-gary-primed": "F:/PATH//testtranscript_info.xlsx",
+        "redosubcreator": "F:/PATH//updated_excel_file.xlsx",
+        "3-post-good": "F:/PATH//output.xlsx"
+    },
+    "scripts": {
+        "gary_primed": "F:/PATH//2-gary-primed.py",
+        "redosubcreator": "F:/PATH//redosubcreator.py",
+        "post_good": "F:/PATH//3-POST-GOOD.py"
+    },
+    "openai_api_key": "KEY",
+    "retry_settings": {
+        "delay_between_requests": 2,
+        "max_retries": 5,
+        "retry_delay": 3
+    }
+}
