@@ -17,7 +17,7 @@ for each ad video in the master CSV (parallelized across videos)
 ## NOTE: We assume videos are stored in pres_ad_videos/ and transcripts are stored as in step1 script
 
 
-METADATA_FNAME = 'METADATA.csv'
+METADATA_FNAME = os.path.abspath(sys.argv[4])
 
 
 filepaths_transcripts_local = glob.glob('pres_ad_whisptranscripts_json/*.json')

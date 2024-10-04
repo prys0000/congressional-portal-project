@@ -55,7 +55,7 @@ if "%SUMMARY_DIR%"=="" (
 
 :: Step 1: Transcribe videos
 echo Running step 1: Transcribe videos
-mpiexec -n %NUM_PROCESSES% python step1_transcribe_vids_parallel.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%"
+mpiexec -n %NUM_PROCESSES% -wdir "%CD%" python step1_transcribe_vids_parallel.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%"
 
 if errorlevel 1 (
     echo Error occurred in step 1.
@@ -65,7 +65,7 @@ if errorlevel 1 (
 
 :: Step 2.1: Extract keyframes via speech segments
 echo Running step 2.1: Extract keyframes via speech segments
-mpiexec -n %NUM_PROCESSES% python step2.1_extract_keyframes_viaspeechsegments.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%" "%KEYFRAMES_SPEECH_DIR%" "%METADATA_FILE%"
+mpiexec -n %NUM_PROCESSES% -wdir "%CD%" python step2.1_extract_keyframes_viaspeechsegments.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%" "%KEYFRAMES_SPEECH_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
     echo Error occurred in step 2.1.
@@ -75,7 +75,7 @@ if errorlevel 1 (
 
 :: Step 2.2: Extract keyframes at regular intervals
 echo Running step 2.2: Extract keyframes at regular intervals
-mpiexec -n %NUM_PROCESSES% python step2.2_extract_keyframes_regularintervals.py "%VIDEO_DIR%" "%KEYFRAMES_REG_DIR%" "%METADATA_FILE%"
+mpiexec -n %NUM_PROCESSES% -wdir "%CD%" python step2.2_extract_keyframes_regularintervals.py "%VIDEO_DIR%" "%KEYFRAMES_REG_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
     echo Error occurred in step 2.2.
@@ -85,7 +85,7 @@ if errorlevel 1 (
 
 :: Step 3: Describe keyframes
 echo Running step 3: Describe keyframes
-mpiexec -n %NUM_PROCESSES% python step3_describe_keyframes.py "%KEYFRAMES_SPEECH_DIR%" "%KEYFRAMES_REG_DIR%" "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
+mpiexec -n %NUM_PROCESSES% -wdir "%CD%" python step3_describe_keyframes.py "%KEYFRAMES_SPEECH_DIR%" "%KEYFRAMES_REG_DIR%" "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
     echo Error occurred in step 3.
@@ -95,7 +95,7 @@ if errorlevel 1 (
 
 :: Step 4: Summarize videos
 echo Running step 4: Summarize videos
-mpiexec -n %NUM_PROCESSES% python step4_summarize_vids_parallel.py "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%SUMMARY_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
+mpiexec -n %NUM_PROCESSES% -wdir "%CD%" python step4_summarize_vids_parallel.py "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%SUMMARY_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
     echo Error occurred in step 4.
