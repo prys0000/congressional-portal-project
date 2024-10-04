@@ -1,10 +1,72 @@
-**Set-Up Instructions and Batch Process for Pipeline**
+# Video Processing Pipeline Documentation
 
-Below are the instructions to set up the environment and run the pipeline using the provided scripts. This includes a `set-up.bat` file and a batch process to execute the scripts in order.
+Welcome to the **Video Processing Pipeline** repository! This project provides a comprehensive workflow for transcribing videos, extracting keyframes, describing those keyframes using OpenAI's GPT-4 with vision capabilities, and summarizing the videos.
+
+This documentation will guide you through setting up the environment, running the pipeline, and understanding each step of the process.
 
 ---
 
-### **`set-up.bat`**
+## Table of Contents
+
+- [Overview](#overview)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Directory Structure](#directory-structure)
+- [Usage](#usage)
+  - [Running the Pipeline](#running-the-pipeline)
+- [Scripts Description](#scripts-description)
+  - [Step 1: Transcribe Videos](#step-1-transcribe-videos)
+  - [Step 2.1: Extract Keyframes via Speech Segments](#step-21-extract-keyframes-via-speech-segments)
+  - [Step 2.2: Extract Keyframes at Regular Intervals](#step-22-extract-keyframes-at-regular-intervals)
+  - [Step 3: Describe Keyframes](#step-3-describe-keyframes)
+  - [Step 4: Summarize Videos](#step-4-summarize-videos)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Overview
+
+This pipeline automates the process of:
+
+1. **Transcribing Videos**: Uses OpenAI's Whisper model to transcribe video files.
+2. **Extracting Keyframes**:
+   - Via speech segments.
+   - At regular intervals.
+3. **Describing Keyframes**: Utilizes GPT-4 with vision capabilities to describe extracted keyframes.
+4. **Summarizing Videos**: Generates summaries of videos based on transcripts and keyframe descriptions.
+
+---
+
+## Prerequisites
+
+- **Operating System**: Windows (the batch scripts are designed for Windows Command Prompt).
+- **Python**: Version 3.x installed and added to your system PATH.
+- **Microsoft MPI**: For parallel processing.
+- **ffmpeg**: For video processing.
+- **OpenAI API Key**: Access to GPT-4 with vision capabilities.
+
+---
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/video-processing-pipeline.git
+cd video-processing-pipeline
+```
+
+### 2. Set Up the Environment
+
+Run the `set-up.bat` script to install necessary dependencies.
+
+```batch
+set-up.bat
+```
+
+**`set-up.bat`**:
 
 ```batch
 @echo off
@@ -27,52 +89,53 @@ echo Installing MPI...
 :: Download and install Microsoft MPI from:
 :: https://www.microsoft.com/en-us/download/details.aspx?id=57467
 
-:: Set environment variables if necessary (e.g., add ffmpeg to PATH)
-
 echo Setup complete.
 pause
 ```
 
-**Note**: The `choco` command requires [Chocolatey](https://chocolatey.org/), a package manager for Windows. If you don't have it installed, you can download ffmpeg manually or install Chocolatey from [https://chocolatey.org/install](https://chocolatey.org/install).
+**Note**: The `choco` command requires [Chocolatey](https://chocolatey.org/). If you don't have it installed, you can download ffmpeg manually.
+
+### 3. Configure OpenAI API Key
+
+Set your OpenAI API key as an environment variable:
+
+```batch
+setx OPENAI_API_KEY "your-api-key-here"
+```
+
+Replace `"your-api-key-here"` with your actual OpenAI API key.
 
 ---
 
-### **Instructions for Setting Up OpenAI API Key**
+## Directory Structure
 
-1. **Set OpenAI API Key as Environment Variable**
+Ensure the following directories are present:
 
-   It's recommended to set your OpenAI API key as an environment variable for security. You can do this by running the following command in your command prompt:
-
-   ```batch
-   setx OPENAI_API_KEY "your-api-key-here"
-   ```
-
-   Replace `"your-api-key-here"` with your actual OpenAI API key.
-
-2. **Modify Scripts to Use Environment Variable**
-
-   Update `step3_describe_keyframes.py` and `step4_summarize_vids_parallel.py` to read the API key from the environment variable.
-
-   Replace the line:
-
-   ```python
-   MY_OPENAI_API_KEY = "Replace-With-Your-API-Key"
-   ```
-
-   with:
-
-   ```python
-   import os
-   MY_OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-   if not MY_OPENAI_API_KEY:
-       raise Exception("Please set the OPENAI_API_KEY environment variable.")
-   ```
-
-   Also, make sure to `import os` at the beginning of the scripts if it's not already imported.
+- **Input Directories**:
+  - `pres_ad_videos`: Place your input video files (`.mp4` format) here.
+- **Required Files**:
+  - `METADATA.csv`: Metadata file for the videos.
+- **Output Directories** (will be created by the scripts if they don't exist):
+  - `pres_ad_whisptranscripts`
+  - `keyframes_speechcentered`
+  - `keyframes_regintervals`
+  - `GPT_frame_descriptions_speechcentered`
+  - `GPT_frame_descriptions_regintervals`
+  - `GPT_video_summaries`
 
 ---
 
-### **Batch Process (`run_pipeline.bat`)**
+## Usage
+
+### Running the Pipeline
+
+Use the `run_pipeline.bat` script to execute the pipeline. This script prompts you for necessary paths and runs each step sequentially.
+
+```batch
+run_pipeline.bat
+```
+
+**`run_pipeline.bat`**:
 
 ```batch
 @echo off
@@ -81,60 +144,101 @@ echo Running pipeline...
 :: Set number of processes (adjust as needed)
 set NUM_PROCESSES=4
 
+:: Prompt user for video directory
+set /p VIDEO_DIR="Please enter the path to the directory containing the video files (e.g., pres_ad_videos): "
+
 :: Ensure required directories exist
-if not exist "pres_ad_videos" (
-    echo "Error: Directory 'pres_ad_videos' not found. Please place your video files in this directory."
+if not exist "%VIDEO_DIR%" (
+    echo Error: Directory "%VIDEO_DIR%" not found. Please provide a valid directory.
     pause
     exit /b 1
 )
 
+:: Prompt for metadata file
+set /p METADATA_FILE="Please enter the path to the metadata CSV file (e.g., METADATA.csv): "
+if not exist "%METADATA_FILE%" (
+    echo Error: File "%METADATA_FILE%" not found. Please provide a valid file.
+    pause
+    exit /b 1
+)
+
+:: Prompt user for output directories (or use default names)
+set /p TRANSCRIPT_DIR="Please enter the path for the transcript output directory (default: pres_ad_whisptranscripts): "
+if "%TRANSCRIPT_DIR%"=="" (
+    set TRANSCRIPT_DIR=pres_ad_whisptranscripts
+)
+
+set /p KEYFRAMES_SPEECH_DIR="Please enter the path for speech-centered keyframes directory (default: keyframes_speechcentered): "
+if "%KEYFRAMES_SPEECH_DIR%"=="" (
+    set KEYFRAMES_SPEECH_DIR=keyframes_speechcentered
+)
+
+set /p KEYFRAMES_REG_DIR="Please enter the path for regular intervals keyframes directory (default: keyframes_regintervals): "
+if "%KEYFRAMES_REG_DIR%"=="" (
+    set KEYFRAMES_REG_DIR=keyframes_regintervals
+)
+
+set /p FRAME_DESC_SPEECH_DIR="Please enter the path for speech-centered frame descriptions (default: GPT_frame_descriptions_speechcentered): "
+if "%FRAME_DESC_SPEECH_DIR%"=="" (
+    set FRAME_DESC_SPEECH_DIR=GPT_frame_descriptions_speechcentered
+)
+
+set /p FRAME_DESC_REG_DIR="Please enter the path for regular intervals frame descriptions (default: GPT_frame_descriptions_regintervals): "
+if "%FRAME_DESC_REG_DIR%"=="" (
+    set FRAME_DESC_REG_DIR=GPT_frame_descriptions_regintervals
+)
+
+set /p SUMMARY_DIR="Please enter the path for video summaries directory (default: GPT_video_summaries): "
+if "%SUMMARY_DIR%"=="" (
+    set SUMMARY_DIR=GPT_video_summaries
+)
+
 :: Step 1: Transcribe videos
 echo Running step 1: Transcribe videos
-mpiexec -n %NUM_PROCESSES% python step1_transcribe_vids_parallel.py
+mpiexec -n %NUM_PROCESSES% python step1_transcribe_vids_parallel.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%"
 
-:: Check for errors
 if errorlevel 1 (
-    echo "Error occurred in step 1."
+    echo Error occurred in step 1.
     pause
     exit /b 1
 )
 
 :: Step 2.1: Extract keyframes via speech segments
 echo Running step 2.1: Extract keyframes via speech segments
-mpiexec -n %NUM_PROCESSES% python step2.1_extract_keyframes_viaspeechsegments.py
+mpiexec -n %NUM_PROCESSES% python step2.1_extract_keyframes_viaspeechsegments.py "%VIDEO_DIR%" "%TRANSCRIPT_DIR%" "%KEYFRAMES_SPEECH_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
-    echo "Error occurred in step 2.1."
+    echo Error occurred in step 2.1.
     pause
     exit /b 1
 )
 
 :: Step 2.2: Extract keyframes at regular intervals
 echo Running step 2.2: Extract keyframes at regular intervals
-mpiexec -n %NUM_PROCESSES% python step2.2_extract_keyframes_regularintervals.py
+mpiexec -n %NUM_PROCESSES% python step2.2_extract_keyframes_regularintervals.py "%VIDEO_DIR%" "%KEYFRAMES_REG_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
-    echo "Error occurred in step 2.2."
+    echo Error occurred in step 2.2.
     pause
     exit /b 1
 )
 
 :: Step 3: Describe keyframes
 echo Running step 3: Describe keyframes
-mpiexec -n %NUM_PROCESSES% python step3_describe_keyframes.py
+mpiexec -n %NUM_PROCESSES% python step3_describe_keyframes.py "%KEYFRAMES_SPEECH_DIR%" "%KEYFRAMES_REG_DIR%" "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
-    echo "Error occurred in step 3."
+    echo Error occurred in step 3.
     pause
     exit /b 1
 )
 
 :: Step 4: Summarize videos
 echo Running step 4: Summarize videos
-mpiexec -n %NUM_PROCESSES% python step4_summarize_vids_parallel.py
+mpiexec -n %NUM_PROCESSES% python step4_summarize_vids_parallel.py "%FRAME_DESC_SPEECH_DIR%" "%FRAME_DESC_REG_DIR%" "%SUMMARY_DIR%" "%TRANSCRIPT_DIR%" "%VIDEO_DIR%" "%METADATA_FILE%"
 
 if errorlevel 1 (
-    echo "Error occurred in step 4."
+    echo Error occurred in step 4.
     pause
     exit /b 1
 )
@@ -143,75 +247,158 @@ echo Pipeline complete.
 pause
 ```
 
----
+#### Responding to Prompts
 
-### **Additional Setup Instructions**
+When running `run_pipeline.bat`, you'll be prompted for various paths. You can accept default values by pressing **Enter** or specify custom paths.
 
-- **Python Installation**
+**Example Interaction**:
 
-  Ensure that Python 3.x is installed on your system and that the `python` command is available in your command prompt.
+```
+Please enter the path to the directory containing the video files (e.g., pres_ad_videos): C:\MyProject\pres_ad_videos
 
-- **MPI Installation**
+Please enter the path to the metadata CSV file (e.g., METADATA.csv): C:\MyProject\METADATA.csv
 
-  - Download and install Microsoft MPI from the following link:
+Please enter the path for the transcript output directory (default: pres_ad_whisptranscripts): [Press Enter]
 
-    [https://www.microsoft.com/en-us/download/details.aspx?id=57467](https://www.microsoft.com/en-us/download/details.aspx?id=57467)
+Please enter the path for speech-centered keyframes directory (default: keyframes_speechcentered): [Press Enter]
 
-  - After installation, make sure the `mpiexec` command is available in your command prompt.
+Please enter the path for regular intervals keyframes directory (default: keyframes_regintervals): [Press Enter]
 
-- **ffmpeg Installation**
+Please enter the path for speech-centered frame descriptions (default: GPT_frame_descriptions_speechcentered): [Press Enter]
 
-  - Download ffmpeg from:
+Please enter the path for regular intervals frame descriptions (default: GPT_frame_descriptions_regintervals): [Press Enter]
 
-    [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+Please enter the path for video summaries directory (default: GPT_video_summaries): [Press Enter]
+```
 
-  - Extract the ffmpeg binaries and add the `bin` directory to your system `PATH`.
-
-- **OpenAI GPT-4 with Vision**
-
-  - Note that GPT-4 with vision capabilities is currently only available to selected users and through the OpenAI API.
-
-  - Ensure that your OpenAI API key has access to GPT-4 with vision capabilities. If not, you may need to adjust the scripts or request access.
-
-- **Directory Structure**
-
-  Ensure that the following directories are present:
-
-  - **Input Directories:**
-
-    - `pres_ad_videos`: Place your input video files (`.mp4` format) in this directory.
-
-  - **Output Directories (will be created by scripts if they don't exist):**
-
-    - `pres_ad_whisptranscripts_json`
-    - `pres_ad_whisptranscripts_tsv`
-    - `pres_ad_whisptranscripts_txt`
-    - `keyframes_speechcentered`
-    - `keyframes_regintervals`
-    - `GPT_frame_descriptions_speechcentered`
-    - `GPT_frame_descriptions_regintervals`
-    - `GPT_video_summaries`
-
-- **METADATA.csv**
-
-  - Ensure that a file named `METADATA.csv` is present in the working directory. This file is required by some of the scripts.
+**Note**: Brackets `[Press Enter]` indicate that you simply press the Enter key to accept the default value.
 
 ---
 
-### **Final Notes**
+## Scripts Description
 
-- Before running the pipeline, ensure that all the scripts are in the same directory as the batch files.
+### Step 1: Transcribe Videos
 
-- Adjust the `NUM_PROCESSES` variable in `run_pipeline.bat` according to the number of CPU cores or processes you want to utilize.
+**Script**: `step1_transcribe_vids_parallel.py`
 
-- If any of the steps fail, refer to the error messages and ensure that all dependencies are correctly installed and configured.
+- **Function**: Transcribes videos using OpenAI's Whisper model in parallel.
+- **Input**:
+  - Video files from the specified video directory.
+- **Output**:
+  - Transcripts in JSON, TSV, and TXT formats stored in the transcript output directory.
 
-- Remember to replace any placeholder text in the scripts (e.g., API keys) with your actual information.
+**Usage**:
 
-- **Important**: The scripts use hardcoded paths and filenames. Ensure that the filenames and paths in your environment match those expected by the scripts.
+```bash
+mpiexec -n <num_processes> python step1_transcribe_vids_parallel.py <video_directory> <transcript_output_directory>
+```
+
+### Step 2.1: Extract Keyframes via Speech Segments
+
+**Script**: `step2.1_extract_keyframes_viaspeechsegments.py`
+
+- **Function**: Extracts keyframes from videos based on speech segments.
+- **Input**:
+  - Video files and corresponding transcripts.
+- **Output**:
+  - Keyframe images stored in the speech-centered keyframes directory.
+
+**Usage**:
+
+```bash
+mpiexec -n <num_processes> python step2.1_extract_keyframes_viaspeechsegments.py <video_directory> <transcript_directory> <keyframe_output_directory> <metadata_csv>
+```
+
+### Step 2.2: Extract Keyframes at Regular Intervals
+
+**Script**: `step2.2_extract_keyframes_regularintervals.py`
+
+- **Function**: Extracts keyframes from videos at regular time intervals.
+- **Input**:
+  - Video files.
+- **Output**:
+  - Keyframe images stored in the regular intervals keyframes directory.
+
+**Usage**:
+
+```bash
+mpiexec -n <num_processes> python step2.2_extract_keyframes_regularintervals.py <video_directory> <keyframe_output_directory> <metadata_csv>
+```
+
+### Step 3: Describe Keyframes
+
+**Script**: `step3_describe_keyframes.py`
+
+- **Function**: Describes keyframes using OpenAI's GPT-4 with vision capabilities.
+- **Input**:
+  - Keyframe images.
+- **Output**:
+  - Descriptions of keyframes stored in the frame descriptions directories.
+
+**Usage**:
+
+```bash
+mpiexec -n <num_processes> python step3_describe_keyframes.py <speech_keyframe_dir> <reginterval_keyframe_dir> <speech_frame_desc_output_dir> <reginterval_frame_desc_output_dir> <transcript_dir> <video_dir> <metadata_csv>
+```
+
+### Step 4: Summarize Videos
+
+**Script**: `step4_summarize_vids_parallel.py`
+
+- **Function**: Summarizes videos based on transcripts and keyframe descriptions.
+- **Input**:
+  - Transcripts and keyframe descriptions.
+- **Output**:
+  - Summaries stored in the video summaries directory.
+
+**Usage**:
+
+```bash
+mpiexec -n <num_processes> python step4_summarize_vids_parallel.py <speech_frame_desc_dir> <reginterval_frame_desc_dir> <summary_output_dir> <transcript_dir> <video_dir> <metadata_csv>
+```
 
 ---
 
-By following these instructions and using the provided batch files, you should be able to set up the environment and run the pipeline to process your videos.
+## Troubleshooting
 
-Let me know if you need further assistance.
+- **Error: Directory Not Found**
+
+  If you encounter an error stating a directory is not found, ensure that the path you provided exists and is correctly typed.
+
+- **OpenAI API Key Issues**
+
+  Ensure your API key is correctly set as an environment variable and that you have access to GPT-4 with vision capabilities.
+
+- **ffmpeg Not Installed**
+
+  If `ffmpeg` is not found, ensure it is installed and added to your system PATH.
+
+- **MPI Issues**
+
+  Ensure Microsoft MPI is installed and the `mpiexec` command is available.
+
+- **Script Errors**
+
+  Check the error messages for specifics and ensure all dependencies are installed. The scripts rely on certain Python packages and external tools.
+
+---
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+**Note**: This documentation assumes you have the necessary permissions and access to the required tools and APIs. Always ensure compliance with the terms of service of any third-party services used.
+
+---
+
+## Contact
+
+For questions or support, please open an issue on the GitHub repository or contact the maintainer.
