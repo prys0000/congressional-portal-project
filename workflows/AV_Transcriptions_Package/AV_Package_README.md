@@ -1,105 +1,217 @@
-## AV_Transcription_Package
+**Set-Up Instructions and Batch Process for Pipeline**
 
-This package automates audio transcription from video files, stores the transcriptions as TXT files (side-car), and compiles the results into an Excel file for easy access and analysis. It provides error handling and measures the execution time to monitor script performance. 
-
-For the ***congressional portal project***, the steps summarized are:
-* [Script #1](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/allison.py), ${\color{blue}allison.py}$ transcribes video files and extracts to .txt file.
-* [Script #2](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
-* [Script #3](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/garyvidiii.py), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentiment, and specified metadata from their contents.
+Below are the instructions to set up the environment and run the pipeline using the provided scripts. This includes a `set-up.bat` file and a batch process to execute the scripts in order.
 
 ---
 
+### **`set-up.bat`**
 
-Here's a summary of how it works:
+```batch
+@echo off
+echo Setting up the environment...
 
-* **Initialization:**
+:: Install necessary Python packages
+pip install numpy pandas mpi4py openai opencv-python-headless glob2
 
-    * [Script #1](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/allison.py)), ${\color{blue}allison.py}$ begins by importing necessary libraries, including os for file operations, speech_recognition for speech recognition, moviepy.editor for working with video and audio files, pandas for data handling, and time for measuring script execution time.
+:: Install Whisper (OpenAI's speech recognition model)
+pip install git+https://github.com/openai/whisper.git
 
-* **Recording Start Time:**
+:: Install ffmpeg
+echo Installing ffmpeg...
+:: You can download ffmpeg from https://ffmpeg.org/download.html
+:: For Windows, you can use a package manager like Chocolatey:
+choco install ffmpeg -y
 
-    * ${\color{blue}allison.py}$ records the start time to measure the execution time.
+:: Install MPI
+echo Installing MPI...
+:: Download and install Microsoft MPI from:
+:: https://www.microsoft.com/en-us/download/details.aspx?id=57467
 
-* **Recognizer Initialization:**
+:: Set environment variables if necessary (e.g., add ffmpeg to PATH)
 
-    * It initializes a speech recognizer using the speech_recognition library.
+echo Setup complete.
+pause
+```
 
-* **Folder Path and Output Directory:**
+**Note**: The `choco` command requires [Chocolatey](https://chocolatey.org/), a package manager for Windows. If you don't have it installed, you can download ffmpeg manually or install Chocolatey from [https://chocolatey.org/install](https://chocolatey.org/install).
 
-    * ${\color{blue}allison.py}$ specifies the folder path containing video files and creates an empty list of results to store the transcription results.
-    * It also defines an output directory where TXT files containing transcriptions will be saved.
+---
 
-* **Iterating Through Video Files:**
+### **Instructions for Setting Up OpenAI API Key**
 
-    * ${\color{blue}allison.py}$ iterates through the files in the specified folder.
-    * For each video file, it performs the following steps:
-    * Loads the video file using moviepy.
-    * Extracts audio from the video.
-    * Saves the extracted audio as a temporary WAV file.
-    * Opens the audio file for speech recognition.
+1. **Set OpenAI API Key as Environment Variable**
 
-* **Speech Recognition:**
+   It's recommended to set your OpenAI API key as an environment variable for security. You can do this by running the following command in your command prompt:
 
-    * ${\color{blue}allison.py}$ uses Google Speech Recognition to transcribe the audio.
-    * The transcribed text is stored in the transcript variable.
+   ```batch
+   setx OPENAI_API_KEY "your-api-key-here"
+   ```
 
-* **Storing Results:**
+   Replace `"your-api-key-here"` with your actual OpenAI API key.
 
-    * The filename and corresponding transcript are appended to the results list.
-    * A TXT file is created for each transcript in the output directory.
+2. **Modify Scripts to Use Environment Variable**
 
-* **Error Handling:**
+   Update `step3_describe_keyframes.py` and `step4_summarize_vids_parallel.py` to read the API key from the environment variable.
 
-    * ${\color{blue}allison.py}$ handles exceptions, such as UnknownValueError and RequestError, which can occur during transcription.
-    * Temporary audio files are deleted after processing.
+   Replace the line:
 
-* **Data Validation:**
+   ```python
+   MY_OPENAI_API_KEY = "Replace-With-Your-API-Key"
+   ```
 
-    * It checks if the number of processed files matches the number of results.
+   with:
 
-* **Creating a DataFrame:**
+   ```python
+   import os
+   MY_OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+   if not MY_OPENAI_API_KEY:
+       raise Exception("Please set the OPENAI_API_KEY environment variable.")
+   ```
 
-    * If the lengths match, ${\color{blue}allison.py}$ creates a pandas DataFrame with columns for filenames and transcripts.
-    * An additional column for file names (without extensions) is added.
+   Also, make sure to `import os` at the beginning of the scripts if it's not already imported.
 
-* **Saving Transcriptions:**
+---
 
-    * ${\color{blue}allison.py}$ saves the DataFrame as an Excel file in the specified output directory.
-    * A message is printed to confirm the successful saving of transcripts.
+### **Batch Process (`run_pipeline.bat`)**
 
-* **Recording End Time:**
+```batch
+@echo off
+echo Running pipeline...
 
-    * ${\color{blue}allison.py}$ records the end time and calculates the total execution time.
- 
-* **Topic, Subject, Project Specific Assignments:**
-    * [Script #2](https://github.com/prys0000/congressional-portal-project/blob/718c68d29d3470f74f461b863fee8905192cb386/workflows/AV_Transcriptions_Package/beth-enhanced-topic.py), ${\color{orange}beth.py}$ automates the transcription of audio from video files, assigns topics to the transcriptions using a trained topic model, and stores the results.
- 
-        * **Training a Topic Model:**
-          * ${\color{orange}beth.py}$ starts by training a topic model using a curated list of subjects from an Excel file. It preprocesses the subjects, creates a dictionary, and generates a corpus for topic modeling. 
-            * The number of topics is determined based on the number of subjects.
-           
-        * **Assigning Topics to Text:**
-          * A function assign_topics_to_text is defined as assigning topics to text.
-          * It preprocesses the input text, converts it to bag-of-words (BoW) format, and assigns topics using the trained LDA (Latent Dirichlet Allocation) model.
+:: Set number of processes (adjust as needed)
+set NUM_PROCESSES=4
 
-        * **Transcribing Videos and Assigning Topics:**
-          * ${\color{orange}beth.py}$ prompts the user to enter the path of the folder containing video files.
-          * It creates an output directory for transcriptions.
-          * It uses the speech_recognition library to transcribe audio from video files.
-          * For each video file (.mp4) in the specified folder: Audio is extracted from the video.
-          * A temporary audio file is created and saved.
-          * Sphinx speech recognition is used to transcribe the audio.
-          * Topics are assigned to the transcription using the previously trained topic model.
-          * The results (filename and assigned subjects) are appended to the results list.
-         
-    * **Error Handling:**
-          * ${\color{orange}beth.py}$ handles exceptions during audio transcription and processing.
-          * It retries file deletion multiple times to ensure the temporary audio files are deleted.
+:: Ensure required directories exist
+if not exist "pres_ad_videos" (
+    echo "Error: Directory 'pres_ad_videos' not found. Please place your video files in this directory."
+    pause
+    exit /b 1
+)
 
-    * **Creating a DataFrame and Saving Results:**
-          * After processing all video files, the script converts the results to a pandas DataFrame.
-          * The DataFrame includes columns for filenames and assigned subjects.
-          * The results are saved as an Excel file with a specified path.
-      
-* **Transforming into NEH Model:**
-    * [Script #3](), ${\color{green}garyViii.py}$ analyzes .txt transcriptions, assigns pre-defined information from trained models, generates summaries, sentiment, and specified metadata from their contents. It uses various controlled and customizable libraries and APIs for text generation, named entity recognition, and project-specific data.
+:: Step 1: Transcribe videos
+echo Running step 1: Transcribe videos
+mpiexec -n %NUM_PROCESSES% python step1_transcribe_vids_parallel.py
+
+:: Check for errors
+if errorlevel 1 (
+    echo "Error occurred in step 1."
+    pause
+    exit /b 1
+)
+
+:: Step 2.1: Extract keyframes via speech segments
+echo Running step 2.1: Extract keyframes via speech segments
+mpiexec -n %NUM_PROCESSES% python step2.1_extract_keyframes_viaspeechsegments.py
+
+if errorlevel 1 (
+    echo "Error occurred in step 2.1."
+    pause
+    exit /b 1
+)
+
+:: Step 2.2: Extract keyframes at regular intervals
+echo Running step 2.2: Extract keyframes at regular intervals
+mpiexec -n %NUM_PROCESSES% python step2.2_extract_keyframes_regularintervals.py
+
+if errorlevel 1 (
+    echo "Error occurred in step 2.2."
+    pause
+    exit /b 1
+)
+
+:: Step 3: Describe keyframes
+echo Running step 3: Describe keyframes
+mpiexec -n %NUM_PROCESSES% python step3_describe_keyframes.py
+
+if errorlevel 1 (
+    echo "Error occurred in step 3."
+    pause
+    exit /b 1
+)
+
+:: Step 4: Summarize videos
+echo Running step 4: Summarize videos
+mpiexec -n %NUM_PROCESSES% python step4_summarize_vids_parallel.py
+
+if errorlevel 1 (
+    echo "Error occurred in step 4."
+    pause
+    exit /b 1
+)
+
+echo Pipeline complete.
+pause
+```
+
+---
+
+### **Additional Setup Instructions**
+
+- **Python Installation**
+
+  Ensure that Python 3.x is installed on your system and that the `python` command is available in your command prompt.
+
+- **MPI Installation**
+
+  - Download and install Microsoft MPI from the following link:
+
+    [https://www.microsoft.com/en-us/download/details.aspx?id=57467](https://www.microsoft.com/en-us/download/details.aspx?id=57467)
+
+  - After installation, make sure the `mpiexec` command is available in your command prompt.
+
+- **ffmpeg Installation**
+
+  - Download ffmpeg from:
+
+    [https://ffmpeg.org/download.html](https://ffmpeg.org/download.html)
+
+  - Extract the ffmpeg binaries and add the `bin` directory to your system `PATH`.
+
+- **OpenAI GPT-4 with Vision**
+
+  - Note that GPT-4 with vision capabilities is currently only available to selected users and through the OpenAI API.
+
+  - Ensure that your OpenAI API key has access to GPT-4 with vision capabilities. If not, you may need to adjust the scripts or request access.
+
+- **Directory Structure**
+
+  Ensure that the following directories are present:
+
+  - **Input Directories:**
+
+    - `pres_ad_videos`: Place your input video files (`.mp4` format) in this directory.
+
+  - **Output Directories (will be created by scripts if they don't exist):**
+
+    - `pres_ad_whisptranscripts_json`
+    - `pres_ad_whisptranscripts_tsv`
+    - `pres_ad_whisptranscripts_txt`
+    - `keyframes_speechcentered`
+    - `keyframes_regintervals`
+    - `GPT_frame_descriptions_speechcentered`
+    - `GPT_frame_descriptions_regintervals`
+    - `GPT_video_summaries`
+
+- **METADATA.csv**
+
+  - Ensure that a file named `METADATA.csv` is present in the working directory. This file is required by some of the scripts.
+
+---
+
+### **Final Notes**
+
+- Before running the pipeline, ensure that all the scripts are in the same directory as the batch files.
+
+- Adjust the `NUM_PROCESSES` variable in `run_pipeline.bat` according to the number of CPU cores or processes you want to utilize.
+
+- If any of the steps fail, refer to the error messages and ensure that all dependencies are correctly installed and configured.
+
+- Remember to replace any placeholder text in the scripts (e.g., API keys) with your actual information.
+
+- **Important**: The scripts use hardcoded paths and filenames. Ensure that the filenames and paths in your environment match those expected by the scripts.
+
+---
+
+By following these instructions and using the provided batch files, you should be able to set up the environment and run the pipeline to process your videos.
+
+Let me know if you need further assistance.
