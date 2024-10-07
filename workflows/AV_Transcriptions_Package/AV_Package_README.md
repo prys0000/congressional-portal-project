@@ -30,11 +30,11 @@ This documentation will guide you through setting up the environment, running th
 
 This pipeline automates the process of:
 
-1. **Transcribing Videos**: Uses OpenAI's Whisper model to transcribe video files.
+1. **Transcribing Videos**: Uses the Whisper model (package 1) and Tesseract model (package 2)to transcribe video files.![image](https://github.com/user-attachments/assets/b91acdd8-873c-4fd3-ba2a-2b861e620e0f)
 2. **Extracting Keyframes**:
    - Via speech segments.
    - At regular intervals.
-3. **Describing Keyframes**: Utilizes GPT-4 with vision capabilities to describe extracted keyframes.
+3. **Describing Keyframes**: Utilizes GPT-4 to describe extracted keyframes.
 4. **Summarizing Videos**: Generates summaries of videos based on transcripts and keyframe descriptions.
 
 ---
