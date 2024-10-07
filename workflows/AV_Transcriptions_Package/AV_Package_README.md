@@ -1,6 +1,6 @@
 # Video Processing Pipeline Documentation
 
-This project provides a comprehensive workflow for transcribing videos, extracting keyframes, describing those keyframes using OpenAI's GPT-4 with vision capabilities, and summarizing the videos.
+This project provides a comprehensive workflow for transcribing videos, extracting keyframes, describing those keyframes using OpenAI's GPT-4 (package 1) or with , and summarizing the videos.
 
 This documentation will guide you through setting up the environment, running the pipeline, and understanding each step of the process.
 
