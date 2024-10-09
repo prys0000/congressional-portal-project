@@ -4,7 +4,7 @@
 
 ## Overview
 
-The **Congressional Portal Project** provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies and automated workflows and to document strategies throughout the project timeline. The project focuses on materials relating to the American Congress from the [*Carl Albert Research and Studies Center Archives**](https://www.ou.edu/carlalbertcenter/congressional-collection).
+The **Congressional Portal Project** provides a repository for workflows, methodologies, instructional materials, controlled vocabularies, and more. This repository was created to house large-scale project efficiency methodologies and automated workflows and to document strategies throughout the project timeline. The project focuses on materials relating to the American Congress from the [**Carl Albert Research and Studies Center Archives**](https://www.ou.edu/carlalbertcenter/congressional-collection).
 
 We have developed scripts and batch processes within this repository designed to automate large-scale archival workflows. The primary goal is to streamline extracting, analyzing, and enriching metadata from archival text files using Natural Language Processing (NLP) techniques and OpenAI's GPT models. This automation is crucial for efficiently managing extensive archival collections, ensuring consistent metadata quality, and enabling advanced data analysis.
 
@@ -13,6 +13,7 @@ We have developed scripts and batch processes within this repository designed to
 - **Partnerships**: Collaborated with West Virginia University Libraries, the Robert J. Dole Institute of Politics, and the Robert C. Byrd Center for Congressional History and Education, The Dirksen Congressional Center, University of Hawai'i at Manoa, and Richard B. Russell Library for Political Research and Studies, to create the [**American Congress Digital Archives Portal**](https://congressarchives.org/)
 - **Objective**: Address challenges in using congressional archives, which are large, complex, and dispersed across various institutions.
 - **Focus**: Highlight materials related to American Indian sovereignty, providing insights into the struggles and achievements of American Indian communities.
+- **Results**: The project began with several independent scripts handling different tasks across stages of transcription, metadata extraction, and face recognition. Over time, through multiple iterations and refinements, the workflow has evolved into a more [**streamlined and efficient pipeline**](https://github.com/prys0000/congressional-portal-project/blob/501b9ba0b95882a39753b41a3562e6434d29e5a7/workflows/README-Workflow.md). This pipeline now integrates advanced natural language and facial recognition tools, controlled lists, feedback loops, and parallel processing via MPI to enhance both accuracy and speed.
 
 ## Key Tasks
 
