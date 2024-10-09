@@ -1,6 +1,6 @@
 # Workflow README
 
-This folder contains information and complete workflow packages, topic and training models, and a basic student information guide. 
+This folder contains information and complete workflow packages, topic and training models, and a basic student information guide. Students, please see the [**'Using the Automated Text Recognition and Metadata Extraction Workflow'**](https://sooners.sharepoint.com/:u:/r/sites/CACArchives/SitePages/automate-text-recognition-and-metadata-extraction.aspx?csf=1&web=1&e=N6aEXi) for processing. 
 
 ## **Topics and Keywords** columns/lists were compiled from:  
 
