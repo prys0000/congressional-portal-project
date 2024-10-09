@@ -66,7 +66,7 @@ The Center concentrates on content related to **four curated collections, encomp
 
 [Carl Albert Congressional Research and Studies Center Archives](https://www.ou.edu/carlalbertcenter/congressional-collection)
 
-See [acknowledgments](https://github.com/prys0000/congressional-portal-project/blob/main/documentation-applications-lists/acknowledgements.md) for student staff and collaborators.
+See [acknowledgments](https://github.com/prys0000/congressional-portal-project/blob/b5cd8706a591b9f2c11e968c8110db7c93dbac24/acknowledgements.md) for student staff and collaborators.
 
 See [collaborative partners](https://github.com/prys0000/congressional-portal-project/blob/main/collaborative-partners.md) for project partners.
 
