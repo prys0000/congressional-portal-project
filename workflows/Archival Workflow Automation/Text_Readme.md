@@ -1,4 +1,4 @@
-# Archival Workflow Automation with Python and OpenAI
+# Archival Workflow Automation
 
 ## Overview
 
