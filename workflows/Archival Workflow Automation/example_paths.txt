@@ -1,9 +1,0 @@
-F:/NEH Grant Automated Processes
-
-F:/NEH Grant Automated Processes/CAC_CC_009_2_67_23_0000
-
-F:/NEH Grant Automated Processes/2-gary-primed.py
-
-F:/NEH Grant Automated Processes/redosubcreator.py
-
-F:/NEH Grant Automated Processes/3-POST-GOOD.py
