@@ -1,0 +1,246 @@
+{
+  "Agriculture and Food": [
+    "Department of Agriculture",
+    "USDA",
+    "FDA",
+    "food safety",
+    "agricultural policy",
+    "crop production"
+  ],
+  "Animals": [
+    "endangered species protection",
+    "animal welfare legislation",
+    "marine mammal protection",
+    "animal trafficking",
+    "exotic wildlife regulations"
+  ],
+  "Armed Forces and National Security": [
+    "national defense",
+    "homeland security operations",
+    "DHS",
+    "border security",
+    "military strategy",
+    "cybersecurity"
+  ],
+  "Arts, Culture, Religion": [
+    "NEH",
+    "cultural heritage",
+    "museum funding",
+    "religious freedom act",
+    "cultural property rights",
+    "church-state separation"
+  ],
+  "Civil Rights and Liberties, Minority Issues": [
+    "civil rights movement",
+    "equal protection clause",
+    "voting rights act",
+    "Indian civil rights",
+    "minority healthcare access",
+    "equal educational opportunities"
+  ],
+  "Commerce": [
+    "business regulation",
+    "trade policy",
+    "consumer protection laws",
+    "intellectual property rights",
+    "international trade agreements",
+    "antitrust laws"
+  ],
+  "Congress": [
+    "congressional oversight",
+    "legislative reform",
+    "lobbying regulation",
+    "congressional bills",
+    "congressional committees",
+    "policy amendments"
+  ],
+  "Crime and Law Enforcement": [
+    "criminal justice system",
+    "law enforcement agencies",
+    "FBI investigations",
+    "crime prevention programs",
+    "sentencing guidelines",
+    "drug enforcement policies"
+  ],
+  "Economics and Public Finance": [
+    "fiscal policy",
+    "government budget",
+    "public debt management",
+    "monetary policy",
+    "tax reforms",
+    "economic stimulus"
+  ],
+  "Education": [
+    "federal education programs",
+    "school funding",
+    "literacy initiatives",
+    "tribal education policies",
+    "Native American language preservation",
+    "education equality"
+  ],
+  "Emergency Management": [
+    "FEMA disaster response",
+    "emergency preparedness",
+    "disaster relief funding",
+    "climate resilience planning",
+    "community emergency response"
+  ],
+  "Energy": [
+    "renewable energy initiatives",
+    "oil and gas regulation",
+    "energy conservation policies",
+    "nuclear energy safety",
+    "green energy subsidies",
+    "Department of Energy programs"
+  ],
+  "Environmental Protection": [
+    "EPA regulations",
+    "climate change policy",
+    "pollution control",
+    "wildlife conservation",
+    "Clean Air Act enforcement",
+    "environmental impact assessments"
+  ],
+  "Families": [
+    "child welfare laws",
+    "family planning services",
+    "domestic violence prevention",
+    "Roe v. Wade impact",
+    "elderly care policies",
+    "family assistance programs"
+  ],
+  "Finance and Financial Sector": [
+    "Federal Reserve policies",
+    "financial regulation",
+    "securities laws",
+    "banking oversight",
+    "credit regulation",
+    "investment protection"
+  ],
+  "Foreign Trade and International Finance": [
+    "international trade agreements",
+    "foreign aid programs",
+    "global financial systems",
+    "customs enforcement",
+    "foreign direct investment",
+    "trade embargoes"
+  ],
+  "Government Operations and Politics": [
+    "voter registration laws",
+    "campaign finance reform",
+    "civil service regulations",
+    "FOIA requests",
+    "federal appointments",
+    "whistleblower protections"
+  ],
+  "Health": [
+    "healthcare reform",
+    "Medicare policies",
+    "public health initiatives",
+    "mental health services",
+    "Indian Health Service",
+    "healthcare quality improvement"
+  ],
+  "Housing and Community Development": [
+    "affordable housing programs",
+    "housing discrimination laws",
+    "tribal housing initiatives",
+    "urban development",
+    "NAHASDA",
+    "homeownership support"
+  ],
+  "Immigration": [
+    "naturalization process",
+    "refugee resettlement",
+    "citizenship laws",
+    "immigration reform",
+    "border security policies",
+    "asylum procedures"
+  ],
+  "International Affairs": [
+    "foreign relations",
+    "arms control treaties",
+    "human rights advocacy",
+    "international law enforcement",
+    "diplomatic missions",
+    "foreign aid distribution"
+  ],
+  "Labor and Employment": [
+    "labor rights",
+    "unemployment benefits",
+    "retirement security",
+    "workplace discrimination",
+    "minimum wage laws",
+    "union organization"
+  ],
+  "Native Americans": [
+    "tribal sovereignty",
+    "Indian law",
+    "Native American land rights",
+    "Indian Child Welfare Act",
+    "Bureau of Indian Affairs",
+    "tribal self-determination"
+  ],
+  "Public Lands and Natural Resources": [
+    "federal land management",
+    "water rights",
+    "mining regulations",
+    "national parks",
+    "wilderness protection",
+    "resource conservation policies"
+  ],
+  "Science, Technology, Communications": [
+    "STEM education",
+    "space exploration policy",
+    "research funding",
+    "telecommunication regulations",
+    "NASA programs",
+    "scientific innovation"
+  ],
+  "Social Sciences and History": [
+    "civil rights history",
+    "public history education",
+    "cultural heritage preservation",
+    "social science research",
+    "historical landmark protection"
+  ],
+  "Social Welfare": [
+    "social security policies",
+    "welfare reform",
+    "public assistance programs",
+    "retirement benefits",
+    "poverty alleviation",
+    "social safety nets"
+  ],
+  "Sports and Recreation": [
+    "youth sports programs",
+    "amateur athletics support",
+    "stadium funding",
+    "outdoor recreation policies",
+    "professional sports regulation"
+  ],
+  "Taxation": [
+    "income tax laws",
+    "tax credits",
+    "IRS regulations",
+    "corporate tax policies",
+    "state tax codes",
+    "property tax legislation"
+  ],
+  "Transportation and Public Works": [
+    "infrastructure development",
+    "public transportation systems",
+    "highway safety programs",
+    "FAA regulations",
+    "mass transit funding",
+    "road construction projects"
+  ],
+  "Water Resources Development": [
+    "water conservation policies",
+    "Clean Water Act enforcement",
+    "flood control measures",
+    "water infrastructure funding",
+    "wastewater management",
+    "water rights legislation"
+  ]
+}
